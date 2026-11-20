@@ -1,350 +1,499 @@
+/**
+ * Anchor & Emcee Booking Service — Main Interactive Controller
+ * Pure Vanilla JavaScript (ES6+)
+ */
 document.addEventListener('DOMContentLoaded', () => {
-
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* ==========================================================================
-     Toast — replaces blocking alert() dialogs
+     1. STICKY HEADER & BACK TO TOP ON SCROLL
      ========================================================================== */
-  const toastEl = document.querySelector('.toast');
-  let toastTimer = null;
+  const siteHeader = document.querySelector('.site-header');
+  const backToTopBtn = document.querySelector('.back-to-top-btn');
 
-  const toast = (message, icon = 'ph-check-circle') => {
-    if (!toastEl) return;
-    const iconEl = toastEl.querySelector('i');
-    const textEl = toastEl.querySelector('span');
-    if (iconEl) iconEl.className = `ph ${icon}`;
-    if (textEl) textEl.textContent = message;
-    toastEl.classList.add('show');
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => toastEl.classList.remove('show'), 3200);
-  };
-
-  // cart.js and checkout.js post their own notices through this.
-  window.Aura = Object.assign(window.Aura || {}, { toast });
-
-  /* ==========================================================================
-     Theme Toggle (Dark/Light)
-     ========================================================================== */
-  const themeToggles = document.querySelectorAll('.theme-toggle');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const savedTheme = localStorage.getItem('theme');
-
-  let currentTheme = savedTheme || (prefersDark ? 'dark' : 'light');
-  document.documentElement.setAttribute('data-theme', currentTheme);
-
-  /* Telegram-style sun/moon morph. One drawing, not two icons: the disc grows
-     while a masked "bite" slides across it to carve the crescent, and the beams
-     spin out. That means the markup is injected once and CSS animates it off
-     [data-theme] — re-writing innerHTML per click would kill the transition
-     halfway and the thing would just pop between states. */
-  const themeIcon = (maskId) => `
-    <svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-      <mask class="moon-mask" id="${maskId}">
-        <rect x="0" y="0" width="100%" height="100%" fill="white" />
-        <circle cx="24" cy="10" r="6" fill="black" />
-      </mask>
-      <circle class="sun" cx="12" cy="12" r="6" fill="currentColor" mask="url(#${maskId})" />
-      <g class="sun-beams" stroke="currentColor">
-        <line x1="12" y1="1" x2="12" y2="3" />
-        <line x1="12" y1="21" x2="12" y2="23" />
-        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-        <line x1="1" y1="12" x2="3" y2="12" />
-        <line x1="21" y1="12" x2="23" y2="12" />
-        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
-      </g>
-    </svg>`;
-
-  // Each mask needs its own id — pages carry several toggles (navbar, drawer),
-  // and duplicate ids would point every SVG at the first mask on the page.
-  themeToggles.forEach((toggle, i) => {
-    toggle.innerHTML = themeIcon(`theme-moon-mask-${i}`);
-  });
-
-  const updateThemeState = (theme) => {
-    themeToggles.forEach(toggle => {
-      toggle.setAttribute('aria-pressed', theme === 'dark');
-      toggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
-    });
-  };
-
-  updateThemeState(currentTheme);
-
-  themeToggles.forEach(toggle => {
-    toggle.addEventListener('click', () => {
-      currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', currentTheme);
-      localStorage.setItem('theme', currentTheme);
-      updateThemeState(currentTheme);
-    });
-  });
-
-  /* ==========================================================================
-     RTL Toggle
-     ========================================================================== */
-  const rtlToggles = document.querySelectorAll('.rtl-toggle');
-  let currentDir = localStorage.getItem('dir') || 'ltr';
-  document.documentElement.setAttribute('dir', currentDir);
-
-  rtlToggles.forEach(toggle => {
-    toggle.innerHTML = '<i class="ph ph-arrows-left-right"></i>';
-  });
-
-  rtlToggles.forEach(toggle => {
-    toggle.addEventListener('click', () => {
-      currentDir = currentDir === 'rtl' ? 'ltr' : 'rtl';
-      document.documentElement.setAttribute('dir', currentDir);
-      localStorage.setItem('dir', currentDir);
-    });
-  });
-
-  /* ==========================================================================
-     Mobile Drawer
-     ========================================================================== */
-  const hamburger = document.querySelector('.hamburger');
-  const drawer = document.querySelector('.drawer');
-  const drawerOverlay = document.querySelector('.drawer-overlay');
-  const drawerClose = document.querySelector('.drawer-close');
-
-  const openDrawer = () => {
-    if (drawer) drawer.classList.add('open');
-    if (drawerOverlay) drawerOverlay.classList.add('open');
-    document.body.style.overflow = 'hidden';
-    if (drawerClose) drawerClose.focus();
-  };
-
-  const closeDrawer = () => {
-    if (drawer) drawer.classList.remove('open');
-    if (drawerOverlay) drawerOverlay.classList.remove('open');
-    document.body.style.overflow = '';
-    if (hamburger) hamburger.focus();
-  };
-
-  if (hamburger) hamburger.addEventListener('click', openDrawer);
-  if (drawerClose) drawerClose.addEventListener('click', closeDrawer);
-  if (drawerOverlay) drawerOverlay.addEventListener('click', closeDrawer);
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && drawer && drawer.classList.contains('open')) closeDrawer();
-  });
-
-  /* The bag icon is owned by cart.js — it opens the bag drawer. */
-
-  /* ==========================================================================
-     Scroll state — drives the announcement retract + compact navbar
-     ========================================================================== */
-  const setScrollState = () => {
-    document.body.classList.toggle('scrolled', window.scrollY > 24);
-  };
-  /* ==========================================================================
-     Back to top
-     ========================================================================== */
-  const backToTop = document.querySelector('.back-to-top');
-
-  const setScroll = () => {
-    setScrollState();
-    if (backToTop) {
-      const show = window.scrollY > window.innerHeight * 0.6;
-      backToTop.classList.toggle('show', show);
-      // Keep it out of the tab order while it is invisible.
-      backToTop.tabIndex = show ? 0 : -1;
+  const handleScroll = () => {
+    const scrollY = window.scrollY;
+    if (siteHeader) {
+      siteHeader.classList.toggle('scrolled', scrollY > 30);
+    }
+    if (backToTopBtn) {
+      backToTopBtn.classList.toggle('show', scrollY > 450);
     }
   };
 
-  if (backToTop) {
-    backToTop.tabIndex = -1;
-    backToTop.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+  handleScroll();
+  window.addEventListener('scroll', handleScroll, { passive: true });
+
+  if (backToTopBtn) {
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: prefersReducedMotion ? 'auto' : 'smooth'
+      });
     });
   }
 
-  setScroll();
-  window.addEventListener('scroll', setScroll, { passive: true });
+  /* ==========================================================================
+     2. MOBILE HAMBURGER MENU & DRAWER
+     ========================================================================== */
+  const menuToggle = document.querySelector('.mobile-menu-toggle');
+  const menuClose = document.querySelector('.mobile-drawer-close');
+  const menuDrawer = document.querySelector('.mobile-nav-drawer');
+  const menuOverlay = document.querySelector('.mobile-nav-overlay');
+
+  const openMobileMenu = () => {
+    if (!menuDrawer || !menuOverlay) return;
+    menuDrawer.classList.add('active');
+    menuOverlay.classList.add('active');
+    menuDrawer.setAttribute('aria-hidden', 'false');
+    if (menuToggle) menuToggle.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeMobileMenu = () => {
+    if (!menuDrawer || !menuOverlay) return;
+    menuDrawer.classList.remove('active');
+    menuOverlay.classList.remove('active');
+    menuDrawer.setAttribute('aria-hidden', 'true');
+    if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  };
+
+  if (menuToggle) menuToggle.addEventListener('click', openMobileMenu);
+  if (menuClose) menuClose.addEventListener('click', closeMobileMenu);
+  if (menuOverlay) menuOverlay.addEventListener('click', closeMobileMenu);
+
+  document.querySelectorAll('.mobile-nav-list a').forEach((link) => {
+    link.addEventListener('click', closeMobileMenu);
+  });
 
   /* ==========================================================================
-     Reveal on scroll
+     3. SCROLL REVEAL ANIMATIONS
      ========================================================================== */
-  const revealTargets = document.querySelectorAll('[data-reveal], .reveal-lines, .animate-on-scroll');
+  const revealElements = document.querySelectorAll('[data-reveal]');
 
   if (prefersReducedMotion || !('IntersectionObserver' in window)) {
-    revealTargets.forEach(el => el.classList.add('is-visible'));
+    revealElements.forEach((el) => el.classList.add('revealed'));
   } else {
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('is-visible');
-        revealObserver.unobserve(entry.target);
-      });
-    // threshold 0 + a bottom inset: tall blocks fire as soon as their top
-    // crosses into view, instead of waiting for 12% of a 600px column.
-    }, { threshold: 0, rootMargin: '0px 0px -12% 0px' });
-
-    revealTargets.forEach(el => revealObserver.observe(el));
-  }
-
-  /* ==========================================================================
-     Stat counters — figures tick up the first time their row is seen
-     ========================================================================== */
-  const counters = document.querySelectorAll('.stat-line strong, [data-count]');
-
-  const runCounter = (el, delay) => {
-    const raw = (el.dataset.count || el.textContent).trim();
-    // prefix / number / suffix — keeps the "%" on "100%" and any leading glyph.
-    const parts = raw.match(/^(\D*)([\d.,]+)(.*)$/);
-    if (!parts) return;
-
-    const [, prefix, digits, suffix] = parts;
-    const target = parseFloat(digits.replace(/,/g, ''));
-    if (!isFinite(target)) return;
-
-    const grouped = digits.includes(',');
-    const decimals = (digits.split('.')[1] || '').length;
-    // "06" and "01" have to stay two-up. Padding to the original digit count
-    // also holds the character count steady, so the row never reflows mid-count.
-    const pad = grouped || decimals ? 0 : digits.length;
-
-    const format = (value) => {
-      let out = grouped
-        ? value.toLocaleString(undefined, { maximumFractionDigits: decimals })
-        : value.toFixed(decimals);
-      if (pad) out = out.padStart(pad, '0');
-      return prefix + out + suffix;
-    };
-
-    const duration = 1600;
-    let start = null;
-
-    const tick = (now) => {
-      if (start === null) start = now;
-      const t = Math.min((now - start) / duration, 1);
-      const eased = 1 - Math.pow(1 - t, 3); // ease-out cubic — fast, then settles
-      el.textContent = format(target * eased);
-      if (t < 1) requestAnimationFrame(tick);
-      else el.textContent = raw; // land on the authored string exactly
-    };
-
-    el.textContent = format(0);
-    setTimeout(() => requestAnimationFrame(tick), delay);
-  };
-
-  if (counters.length && !prefersReducedMotion && 'IntersectionObserver' in window) {
-    const counterObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        counterObserver.unobserve(entry.target);
-        const row = entry.target.closest('.stat-line');
-        const index = row ? [...row.querySelectorAll('strong')].indexOf(entry.target) : 0;
-        runCounter(entry.target, Math.max(index, 0) * 120);
-      });
-    }, { threshold: 0.4 });
-
-    counters.forEach(el => counterObserver.observe(el));
-  }
-
-  /* ==========================================================================
-     Wishlist (front-end interactive state)
-     Add-to-bag lives in cart.js, which owns the bag and its badge.
-     ========================================================================== */
-  document.querySelectorAll('.wishlist').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const active = btn.classList.toggle('active');
-      btn.setAttribute('aria-pressed', String(active));
-      toast(active ? 'Saved to your wishlist' : 'Removed from your wishlist', active ? 'ph-heart' : 'ph-heart-break');
-    });
-  });
-
-  /* ==========================================================================
-     Password reveal
-     ========================================================================== */
-  document.querySelectorAll('.password-toggle').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const field = btn.closest('.password-field')?.querySelector('input');
-      if (!field) return;
-
-      const reveal = field.type === 'password';
-      field.type = reveal ? 'text' : 'password';
-      btn.querySelector('i').className = reveal ? 'ph ph-eye-slash' : 'ph ph-eye';
-      btn.setAttribute('aria-label', reveal ? 'Hide password' : 'Show password');
-      btn.setAttribute('aria-pressed', String(reveal));
-      field.focus();
-    });
-  });
-
-  /* ==========================================================================
-     Form Validation
-     ========================================================================== */
-  const validateEmail = (email) => {
-    return String(email)
-      .toLowerCase()
-      .match(
-        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-      );
-  };
-
-  const forms = document.querySelectorAll('form[data-validate]');
-  forms.forEach(form => {
-    form.addEventListener('submit', (e) => {
-      let isValid = true;
-      let firstInvalid = null;
-      const requiredInputs = form.querySelectorAll('input[required], textarea[required], select[required]');
-
-      requiredInputs.forEach(input => {
-        const formGroup = input.closest('.form-group') || input.parentElement;
-
-        input.classList.remove('error', 'success');
-        formGroup.classList.remove('has-error');
-        const errorMsg = formGroup.querySelector('.error-msg');
-        if (errorMsg) errorMsg.textContent = 'This field is required';
-
-        const fail = (msg) => {
-          isValid = false;
-          input.classList.add('error');
-          formGroup.classList.add('has-error');
-          if (msg && errorMsg) errorMsg.textContent = msg;
-          if (!firstInvalid) firstInvalid = input;
-        };
-
-        if (input.type === 'checkbox') {
-          if (!input.checked) {
-            isValid = false;
-            formGroup.classList.add('has-error');
-            if (errorMsg) errorMsg.textContent = 'You must accept the terms';
-            if (!firstInvalid) firstInvalid = input;
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const delay = entry.target.getAttribute('data-reveal-delay') || 0;
+            setTimeout(() => {
+              entry.target.classList.add('revealed');
+            }, Number(delay));
+            revealObserver.unobserve(entry.target);
           }
-        } else if (!input.value.trim()) {
-          fail();
-        } else if (input.type === 'email' && !validateEmail(input.value)) {
-          fail('Please enter a valid email address');
-        // Not `type === 'password'`: revealing a field flips it to `text`, and
-        // that must not quietly skip the length rule.
-        } else if ((input.type === 'password' || input.closest('.password-field')) && input.value.length < 8) {
-          fail('Password must be at least 8 characters');
-        } else if (input.name === 'confirm_password') {
-          const pwd = form.querySelector('input[name="password"]');
-          if (pwd && pwd.value !== input.value) {
-            fail('Passwords do not match');
+        });
+      },
+      { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
+    );
+
+    revealElements.forEach((el) => revealObserver.observe(el));
+  }
+
+  /* ==========================================================================
+     4. ANIMATED METRIC COUNTERS
+     ========================================================================== */
+  const counterElements = document.querySelectorAll('[data-counter]');
+
+  const animateCounter = (el) => {
+    const targetText = el.getAttribute('data-counter') || el.textContent.trim();
+    const match = targetText.match(/^(\D*)([\d,]+)(.*)$/);
+    if (!match) return;
+
+    const [, prefix, numberStr, suffix] = match;
+    const targetValue = parseInt(numberStr.replace(/,/g, ''), 10);
+    if (isNaN(targetValue)) return;
+
+    const hasComma = numberStr.includes(',');
+    const duration = 1500;
+    let startTime = null;
+
+    const step = (timestamp) => {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const currentVal = Math.floor(targetValue * eased);
+      const formatted = hasComma ? currentVal.toLocaleString('en-US') : String(currentVal);
+      el.textContent = `${prefix}${formatted}${suffix}`;
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      } else {
+        el.textContent = targetText;
+      }
+    };
+
+    requestAnimationFrame(step);
+  };
+
+  if (counterElements.length > 0 && !prefersReducedMotion && 'IntersectionObserver' in window) {
+    const counterObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animateCounter(entry.target);
+            counterObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.35 }
+    );
+    counterElements.forEach((el) => counterObserver.observe(el));
+  }
+
+  /* ==========================================================================
+     5. CATEGORY FILTERING (GALLERY & HOSTS DIRECTORY)
+     ========================================================================== */
+  const filterGroups = document.querySelectorAll('[data-filter-group]');
+
+  filterGroups.forEach((group) => {
+    const targetSelector = group.getAttribute('data-filter-target');
+    const filterButtons = group.querySelectorAll('[data-filter]');
+    const filterItems = document.querySelectorAll(targetSelector);
+
+    filterButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const filterVal = btn.getAttribute('data-filter');
+
+        filterButtons.forEach((b) => {
+          b.classList.remove('active');
+          b.setAttribute('aria-pressed', 'false');
+        });
+        btn.classList.add('active');
+        btn.setAttribute('aria-pressed', 'true');
+
+        filterItems.forEach((item) => {
+          const itemCategory = item.getAttribute('data-category') || '';
+          const categories = itemCategory.split(' ');
+          if (filterVal === 'all' || categories.includes(filterVal)) {
+            item.classList.remove('hidden-item');
+            item.style.display = '';
           } else {
-            input.classList.add('success');
+            item.classList.add('hidden-item');
+            item.style.display = 'none';
           }
-        } else {
-          input.classList.add('success');
+        });
+      });
+    });
+  });
+
+  /* ==========================================================================
+     6. GALLERY LIGHTBOX INTERACTION
+     ========================================================================== */
+  const lightboxModal = document.getElementById('galleryLightbox');
+  const galleryCards = Array.from(document.querySelectorAll('.gallery-item'));
+
+  if (lightboxModal && galleryCards.length > 0) {
+    const lightboxImg = document.getElementById('lightboxImage');
+    const lightboxTitle = document.getElementById('lightboxTitle');
+    const lightboxDesc = document.getElementById('lightboxDesc');
+    const lightboxCategory = document.getElementById('lightboxCategory');
+    const closeBtn = lightboxModal.querySelector('.lightbox-close');
+    const prevBtn = lightboxModal.querySelector('.lightbox-nav.prev');
+    const nextBtn = lightboxModal.querySelector('.lightbox-nav.next');
+
+    let currentIndex = 0;
+
+    const getVisibleCards = () => galleryCards.filter((card) => !card.classList.contains('hidden-item'));
+
+    const updateLightbox = (card) => {
+      if (!card) return;
+      const imgEl = card.querySelector('img');
+      const titleEl = card.querySelector('h3');
+      const descEl = card.querySelector('p');
+      const tagEl = card.querySelector('.gallery-tag');
+
+      if (lightboxImg && imgEl) {
+        lightboxImg.src = imgEl.src;
+        lightboxImg.alt = imgEl.alt || 'Event Host Gallery Photograph';
+      }
+      if (lightboxTitle && titleEl) lightboxTitle.textContent = titleEl.textContent;
+      if (lightboxDesc && descEl) lightboxDesc.textContent = descEl.textContent;
+      if (lightboxCategory && tagEl) lightboxCategory.textContent = tagEl.textContent;
+    };
+
+    const openLightbox = (card) => {
+      const visibleCards = getVisibleCards();
+      currentIndex = visibleCards.indexOf(card);
+      if (currentIndex === -1) currentIndex = 0;
+      updateLightbox(visibleCards[currentIndex]);
+      lightboxModal.classList.add('active');
+      lightboxModal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    };
+
+    const closeLightbox = () => {
+      lightboxModal.classList.remove('active');
+      lightboxModal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    };
+
+    const navigateLightbox = (direction) => {
+      const visibleCards = getVisibleCards();
+      if (!visibleCards.length) return;
+      currentIndex = (currentIndex + direction + visibleCards.length) % visibleCards.length;
+      updateLightbox(visibleCards[currentIndex]);
+    };
+
+    galleryCards.forEach((card) => {
+      card.addEventListener('click', () => openLightbox(card));
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openLightbox(card);
+        }
+      });
+    });
+
+    if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+    if (prevBtn) prevBtn.addEventListener('click', (e) => { e.stopPropagation(); navigateLightbox(-1); });
+    if (nextBtn) nextBtn.addEventListener('click', (e) => { e.stopPropagation(); navigateLightbox(1); });
+
+    lightboxModal.addEventListener('click', (e) => {
+      if (e.target === lightboxModal) closeLightbox();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (!lightboxModal.classList.contains('active')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') navigateLightbox(-1);
+      if (e.key === 'ArrowRight') navigateLightbox(1);
+    });
+  }
+
+  /* ==========================================================================
+     7. HOST PROFILE QUICK-VIEW MODAL (HOSTS PAGE)
+     ========================================================================== */
+  const hostModal = document.getElementById('hostProfileModal');
+  const hostViewBtns = document.querySelectorAll('[data-host-modal]');
+
+  if (hostModal && hostViewBtns.length > 0) {
+    const mImg = document.getElementById('modalHostImg');
+    const mName = document.getElementById('modalHostName');
+    const mRole = document.getElementById('modalHostRole');
+    const mExp = document.getElementById('modalHostExp');
+    const mLang = document.getElementById('modalHostLang');
+    const mBio = document.getElementById('modalHostBio');
+    const mEvents = document.getElementById('modalHostEvents');
+    const mBookBtn = document.getElementById('modalHostBookLink');
+    const mClose = hostModal.querySelector('.host-modal-close');
+
+    const closeHostModal = () => {
+      hostModal.classList.remove('active');
+      hostModal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    };
+
+    hostViewBtns.forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const name = btn.getAttribute('data-name') || '';
+        const role = btn.getAttribute('data-role') || '';
+        const exp = btn.getAttribute('data-exp') || '';
+        const lang = btn.getAttribute('data-lang') || '';
+        const bio = btn.getAttribute('data-bio') || '';
+        const img = btn.getAttribute('data-img') || '';
+        const events = btn.getAttribute('data-events') || '450+ Live Stages Hosted';
+
+        if (mImg) { mImg.src = img; mImg.alt = name; }
+        if (mName) mName.textContent = name;
+        if (mRole) mRole.textContent = role;
+        if (mExp) mExp.textContent = exp;
+        if (mLang) mLang.textContent = lang;
+        if (mBio) mBio.textContent = bio;
+        if (mEvents) mEvents.textContent = events;
+        if (mBookBtn) {
+          mBookBtn.href = `contact.html?host=${encodeURIComponent(name)}`;
+        }
+
+        hostModal.classList.add('active');
+        hostModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    if (mClose) mClose.addEventListener('click', closeHostModal);
+    hostModal.addEventListener('click', (e) => {
+      if (e.target === hostModal) closeHostModal();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && hostModal.classList.contains('active')) {
+        closeHostModal();
+      }
+    });
+  }
+
+  /* ==========================================================================
+     8. BOOKING ENQUIRY FORM PREFILL & VALIDATION (CONTACT PAGE)
+     ========================================================================== */
+  const urlParams = new URLSearchParams(window.location.search);
+  const requestedHost = urlParams.get('host');
+  const requestedService = urlParams.get('service');
+
+  const requirementsField = document.getElementById('additionalRequirements');
+  const eventTypeSelect = document.getElementById('eventType');
+
+  if (requestedHost && requirementsField) {
+    requirementsField.value = `Preferred Host Enquiry: ${requestedHost}. `;
+  }
+  if (requestedService && eventTypeSelect) {
+    Array.from(eventTypeSelect.options).forEach((opt) => {
+      if (opt.value.toLowerCase().includes(requestedService.toLowerCase())) {
+        opt.selected = true;
+      }
+    });
+  }
+
+  // Set minimum selectable date on Event Date input to today
+  const eventDateInput = document.getElementById('eventDate');
+  if (eventDateInput) {
+    const today = new Date().toISOString().split('T')[0];
+    eventDateInput.setAttribute('min', today);
+  }
+
+  const bookingForm = document.getElementById('bookingEnquiryForm');
+  const successBanner = document.getElementById('bookingSuccessBanner');
+
+  if (bookingForm) {
+    const validateField = (field) => {
+      const wrapper = field.closest('.form-field-wrap');
+      const value = field.value.trim();
+      let valid = true;
+
+      if (field.hasAttribute('required') && !value) {
+        valid = false;
+      } else if (field.type === 'email' && value) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        valid = emailRegex.test(value);
+      } else if (field.type === 'tel' && value) {
+        const phoneRegex = /^[+\d][\d\s\-()]{6,18}$/;
+        valid = phoneRegex.test(value);
+      }
+
+      field.classList.toggle('is-invalid', !valid);
+      field.classList.toggle('is-valid', valid && value !== '');
+      if (wrapper) wrapper.classList.toggle('has-error', !valid);
+
+      return valid;
+    };
+
+    const formInputs = bookingForm.querySelectorAll('input, select, textarea');
+    formInputs.forEach((input) => {
+      input.addEventListener('blur', () => validateField(input));
+      input.addEventListener('input', () => {
+        if (input.classList.contains('is-invalid')) {
+          validateField(input);
+        }
+      });
+    });
+
+    bookingForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      let isFormValid = true;
+      let firstInvalidField = null;
+
+      formInputs.forEach((input) => {
+        const valid = validateField(input);
+        if (!valid) {
+          isFormValid = false;
+          if (!firstInvalidField) firstInvalidField = input;
         }
       });
 
-      e.preventDefault();
-
-      if (!isValid) {
-        if (firstInvalid) firstInvalid.focus();
-        toast('Please check the highlighted fields', 'ph-warning-circle');
+      if (!isFormValid) {
+        if (firstInvalidField) firstInvalidField.focus();
         return;
       }
 
-      toast('Thank you — we’ll be in touch shortly', 'ph-check-circle');
-      form.reset();
-      form.querySelectorAll('.form-control').forEach(el => el.classList.remove('success', 'error'));
+      const fullName = document.getElementById('fullName')?.value.trim() || 'Valued Client';
+      const eventType = document.getElementById('eventType')?.value || 'Upcoming Event';
+      const eventDate = document.getElementById('eventDate')?.value || 'Scheduled Date';
+      const successNameSpan = document.getElementById('bookingConfirmName');
+      const successDetailsSpan = document.getElementById('bookingConfirmDetails');
+
+      if (successNameSpan) successNameSpan.textContent = fullName;
+      if (successDetailsSpan) successDetailsSpan.textContent = `${eventType} (${eventDate})`;
+
+      if (successBanner) {
+        successBanner.classList.add('show');
+        successBanner.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'center' });
+      }
+
+      bookingForm.reset();
+      formInputs.forEach((input) => {
+        input.classList.remove('is-valid', 'is-invalid');
+        const wrapper = input.closest('.form-field-wrap');
+        if (wrapper) wrapper.classList.remove('has-error');
+      });
+    });
+  }
+});
+
+
+/* ==========================================================================
+   9. THEME TOGGLE (LIGHT / DARK) & RTL TOGGLE (LTR / RTL)
+   ========================================================================== */
+document.addEventListener('DOMContentLoaded', () => {
+  const htmlEl = document.documentElement;
+  const themeButtons = document.querySelectorAll('.theme-toggle-btn');
+  const rtlButtons = document.querySelectorAll('.rtl-toggle-btn');
+
+  // Initialize Theme
+  const savedTheme = localStorage.getItem('anchor_theme') || 'light';
+  const applyTheme = (theme) => {
+    htmlEl.setAttribute('data-theme', theme);
+    localStorage.setItem('anchor_theme', theme);
+    const isDark = theme === 'dark';
+    themeButtons.forEach((btn) => {
+      btn.setAttribute('aria-pressed', String(isDark));
+      btn.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme');
+      btn.setAttribute('title', isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode');
+      const icon = btn.querySelector('i');
+      const label = btn.querySelector('.theme-btn-text');
+      if (icon) {
+        icon.className = isDark ? 'bi bi-sun-fill' : 'bi bi-moon-stars-fill';
+      }
+      if (label) {
+        label.textContent = isDark ? 'Light' : 'Dark';
+      }
+    });
+  };
+
+  applyTheme(savedTheme);
+
+  themeButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const current = htmlEl.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+      applyTheme(current === 'dark' ? 'light' : 'dark');
     });
   });
 
+  // Initialize Direction (LTR / RTL)
+  const savedDir = localStorage.getItem('anchor_dir') || 'ltr';
+  const applyDirection = (dir) => {
+    htmlEl.setAttribute('dir', dir);
+    localStorage.setItem('anchor_dir', dir);
+    const isRtl = dir === 'rtl';
+    rtlButtons.forEach((btn) => {
+      btn.setAttribute('aria-pressed', String(isRtl));
+      btn.setAttribute('aria-label', isRtl ? 'Switch to Left-to-Right (LTR)' : 'Switch to Right-to-Left (RTL)');
+      btn.setAttribute('title', isRtl ? 'Switch to LTR' : 'Switch to RTL');
+      const label = btn.querySelector('.rtl-btn-text');
+      if (label) {
+        label.textContent = isRtl ? 'LTR' : 'RTL';
+      }
+    });
+  };
+
+  applyDirection(savedDir);
+
+  rtlButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const current = htmlEl.getAttribute('dir') === 'rtl' ? 'rtl' : 'ltr';
+      applyDirection(current === 'rtl' ? 'ltr' : 'rtl');
+    });
+  });
 });

@@ -1,676 +1,853 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light" dir="ltr">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aura Favors | Wedding Favors &amp; Custom Gift Company</title>
+  <title>Anchor &amp; Emcee Booking Service | Premier Event Hosts, Anchors &amp; Presenters</title>
   <meta name="description"
-    content="Aura Favors is a premier wedding favor &amp; custom gift company. Discover handcrafted soy candles, artisanal honey jars, engraved keepsakes, and luxury gift hampers with custom monograms and low MOQs.">
-  <meta name="theme-color" content="#2C1E21">
-
-  <!-- Fonts -->
+    content="Book world-class event anchors, corporate keynotes presenters, luxury wedding emcees, award show hosts, and bilingual stage performers for unforgettable live events.">
+  <meta name="theme-color" content="#101827">
   <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- CSS -->
+  <!-- Bootstrap 5.3 CSS & Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/rtl.css">
-
-  <!-- Icons (Phosphor) -->
-  <script src="https://unpkg.com/@phosphor-icons/web"></script>
-
-  <!-- JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Aura Favors",
-    "url": "https://aurafavors.example",
-    "description": "Charming, personalized wedding favors & custom gift studio.",
-    "telephone": "+1-800-555-0199"
-  }
-  </script>
 </head>
 
+<body>
 
-  
-
-  <!-- Drawer Overlay -->
-  <div class="drawer-overlay"></div>
-
-  <!-- Mobile Drawer -->
-  <aside class="drawer" aria-label="Mobile navigation">
-    <div class="drawer-header">
-      <a href="index.html" class="logo"><img src="assets/images/aura-logo.svg" alt="Aura Favors"></a>
-      <button class="drawer-close" aria-label="Close menu"><i class="ph ph-x"></i></button>
-    </div>
-    <nav class="drawer-links">
-      <a href="index.html" class="active">Home</a>
-      <a href="home2.html">Home2</a>
-      <a href="about.html">About</a>
-      <a href="shop.html">Products</a>
-      <a href="branding.html">Branding</a>
-      <a href="bulk.html">Bulk</a>
-      <a href="blog.html">Stories</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <div class="drawer-actions">
-      <div class="drawer-utility">
-        <button class="rtl-toggle" aria-label="Toggle text direction"></button>
-        <button class="theme-toggle" aria-label="Toggle theme"><i class="ph ph-moon"></i></button>
-        <span class="drawer-meta">Appearance &amp; Direction</span>
-      </div>
-      <a href="enquire.html" class="btn btn-primary btn-full" style="margin-top: var(--space-3); justify-content: center;">Enquire</a>
-      <p class="drawer-meta">Studio Care — +1 800 555 0199</p>
-    </div>
-  </aside>
-
-  <!-- Navbar -->
-  <header class="navbar">
+  <!-- ==================== STICKY HEADER ==================== -->
+  <header class="site-header" id="topHeader">
     <div class="container">
-      <a href="index.html" class="logo"><img src="assets/images/aura-logo.svg" alt="Aura Favors"></a>
-      <nav class="nav-links" aria-label="Primary">
-        <a href="index.html" class="active">Home</a>
-        <a href="home2.html">Home2</a>
-        <a href="about.html">About</a>
-        <a href="shop.html">Products</a>
-        <a href="branding.html">Branding</a>
-        <a href="bulk.html">Bulk</a>
-        <a href="blog.html">Stories</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <div class="nav-actions">
-        <button class="rtl-toggle" aria-label="Toggle text direction"></button>
-        <button class="theme-toggle" aria-label="Toggle dark mode"><i class="ph ph-moon"></i></button>
-        <a href="enquire.html" class="btn btn-sm btn-primary desk-only">Enquire</a>
-        <button class="hamburger" aria-label="Open menu"><i class="ph ph-list"></i></button>
+      <div class="header-inner">
+        <a href="index.html" class="brand-logo" aria-label="Anchor &amp; Emcee Booking Service Home">
+          <img src="assets/images/logo.svg" alt="Anchor &amp; Emcee Booking Service Logo" width="250" height="50">
+        </a>
+
+        <nav aria-label="Primary Navigation">
+          <ul class="desktop-nav">
+            <li><a href="index.html" class="nav-link-item active" aria-current="page">Home</a></li>
+            <li><a href="home2.html" class="nav-link-item">Home 2</a></li>
+            <li><a href="hosts.html" class="nav-link-item">Hosts</a></li>
+            <li><a href="gallery.html" class="nav-link-item">Gallery</a></li>
+            <li><a href="about.html" class="nav-link-item">About</a></li>
+            <li><a href="services.html" class="nav-link-item">Services</a></li>
+            <li><a href="contact.html" class="nav-link-item">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <button type="button" class="header-util-btn rtl-toggle-btn" aria-label="Switch to Right-to-Left (RTL)" aria-pressed="false" title="Toggle RTL/LTR">
+            <i class="bi bi-arrow-left-right"></i> <span class="rtl-btn-text">RTL</span>
+          </button>
+          <button type="button" class="header-util-btn theme-toggle-btn" aria-label="Switch to dark theme" aria-pressed="false" title="Toggle Dark/Light Theme">
+            <i class="bi bi-moon-stars-fill"></i>
+          </button>
+          <a href="contact.html" class="btn-brand-gold btn-sm-custom header-cta-desktop">
+            <i class="bi bi-mic-fill"></i> Book an Emcee
+          </a>
+          <button class="mobile-menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false"
+            aria-controls="mobileNavDrawer">
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
       </div>
     </div>
   </header>
 
+  <!-- ==================== MOBILE NAVIGATION DRAWER ==================== -->
+  <div class="mobile-nav-overlay" aria-hidden="true"></div>
+  <aside class="mobile-nav-drawer" id="mobileNavDrawer" aria-label="Mobile Navigation" aria-hidden="true">
+    <div>
+      <div class="mobile-drawer-header">
+        <a href="index.html" class="brand-logo">
+          <img src="assets/images/logo.svg" alt="Anchor &amp; Emcee Booking Service" width="210" height="42">
+        </a>
+        <button class="mobile-drawer-close" type="button" aria-label="Close navigation menu">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="active"><span>Home</span> <i class="bi bi-chevron-right"></i></a></li>
+        <li><a href="home2.html"><span>Home 2</span> <i class="bi bi-chevron-right"></i></a></li>
+        <li><a href="hosts.html"><span>Hosts</span> <i class="bi bi-chevron-right"></i></a></li>
+        <li><a href="gallery.html"><span>Gallery</span> <i class="bi bi-chevron-right"></i></a></li>
+        <li><a href="about.html"><span>About</span> <i class="bi bi-chevron-right"></i></a></li>
+        <li><a href="services.html"><span>Services</span> <i class="bi bi-chevron-right"></i></a></li>
+        <li><a href="contact.html"><span>Contact</span> <i class="bi bi-chevron-right"></i></a></li>
+      </ul>
+    </div>
+    <div class="mobile-drawer-footer">
+      <div class="mobile-drawer-utilities">
+        <button type="button" class="header-util-btn rtl-toggle-btn" aria-label="Switch to Right-to-Left (RTL)" aria-pressed="false">
+          <i class="bi bi-arrow-left-right"></i> <span class="rtl-btn-text">RTL</span>
+        </button>
+        <button type="button" class="header-util-btn theme-toggle-btn" aria-label="Switch to dark theme" aria-pressed="false">
+          <i class="bi bi-moon-stars-fill"></i> <span class="theme-btn-text">Dark</span>
+        </button>
+      </div>
+      <a href="contact.html" class="btn-brand-gold w-100">
+        <i class="bi bi-mic-fill"></i> Book an Emcee
+      </a>
+      <div class="mobile-contact-quick">
+        <span><i class="bi bi-telephone-fill"></i> +1 (800) 945-STAGE</span>
+        <span><i class="bi bi-envelope-fill"></i> bookings@anchoremcee.com</span>
+      </div>
+    </div>
+  </aside>
+
   <main>
 
-    <!-- ==================== HERO ==================== -->
-    <section class="hero light-text">
+    <!-- ==================== 1. CINEMATIC HERO SECTION ==================== -->
+    <section class="hero-section">
+      <div class="hero-bg-media">
+        <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1920&q=85"
+          alt="Illuminated live stage with professional emcee and dramatic concert lighting" fetchpriority="high">
+      </div>
       <div class="hero-overlay"></div>
+      <div class="stage-spotlight"></div>
+      <div class="stage-spotlight spotlight-right"></div>
 
-      <div class="hero-content centered">
-        <div class="hero-inner">
-          <span class="eyebrow centered" data-reveal>Wedding Favor &amp; Custom Gift Studio</span>
-
-          <h1 class="display reveal-lines">
-            <span class="line"><span style="--line:0">Charming Gifts,</span></span>
-            <span class="line"><span style="--line:1">Crafted for Your</span></span>
-            <span class="line"><span style="--line:2"><em class="italic-accent">Forever</em></span></span>
-          </h1>
-
-          <p class="subtext hero-lede" data-reveal style="--reveal-delay:3">
-            Handcrafted wedding favors, artisanal gift hampers, and custom wax-sealed packaging. Built on botanical
-            oils, organic ingredients, custom monograms, and low minimum order quantities (MOQ).
-          </p>
-
-          <div class="hero-actions" data-reveal="fade">
-            <a href="shop.html" class="btn btn-light">Browse Favor Catalog <i class=""></i></a>
-            <a href="enquire.html" class="btn btn-ghost-light">Request Sample Kit</a>
-          </div>
-
-          <div class="hero-meta" data-reveal="fade">
-            <div><strong>25+ MOQ</strong><span>Items Per Style</span></div>
-            <div><strong>100%</strong><span>Hand-Poured &amp; Custom</span></div>
-            <div><strong>500+</strong><span>Happy Couples</span></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-media">
-        <picture>
-          <source media="(max-width: 368px)"
-            srcset="https://www.photojaanic.com/blog/wp-content/uploads/sites/2/2024/04/image11-min-13-1080x720.jpg">
-          <img src="https://www.photojaanic.com/blog/wp-content/uploads/sites/2/2024/04/image11-min-13-1080x720.jpg"
-            alt="Handcrafted Wedding Favors &amp; Custom Gift Packaging Studio" fetchpriority="high">
-        </picture>
-      </div>
-
-    </section>
-
-    <!-- ==================== THE PROMISE ==================== -->
-    <section id="promise" style="padding-bottom:var(--space-8)">
       <div class="container">
-        <div class="section-header centered" style="margin-bottom:var(--space-6)">
-          <span class="eyebrow centered" data-reveal>Artisanal Commitment</span>
-          <h2 data-reveal style="--reveal-delay:1">Our Studio Standards &amp; Craft Pledge</h2>
-          <p class="subtext" data-reveal style="--reveal-delay:2">
-            Every Aura keepsake is shaped by uncompromising craft standards — from organic ethically harvested botanicals to small-batch candle pouring and custom hot-stamped wax seals designed specifically for your wedding day.
-          </p>
-        </div>
-
-        <div class="artisanal-grid" data-reveal="fade">
-          <div class="artisanal-card">
-            <div class="artisanal-icon"><i class="ph ph-seal-check"></i></div>
-            <span class="artisanal-tag">Bespoke Heraldry</span>
-            <h3>Custom Wax Seals &amp; Foil Monograms</h3>
-            <p>Every crest and monogram is hand-drawn and hot-pressed with metallic rose gold or champagne wax for heirloom invitation and favor presentation.</p>
-          </div>
-
-          <div class="artisanal-card">
-            <div class="artisanal-icon"><i class="ph ph-leaf"></i></div>
-            <span class="artisanal-tag">Certified Purity</span>
-            <h3>Hand-Poured Organic Soy &amp; Botanicals</h3>
-            <p>100% natural organic soy wax, pure wild lavender honey, and essential oil fragrances hand-poured in small artisanal studio batches.</p>
-          </div>
-
-          <div class="artisanal-card">
-            <div class="artisanal-icon"><i class="ph ph-sliders"></i></div>
-            <span class="artisanal-tag">Accessible Luxury</span>
-            <h3>Low 25-Piece Minimum Orders (MOQs)</h3>
-            <p>Accessible batch sizes allow couples celebrating intimate micro-weddings and destination galas alike to enjoy couture bespoke gifting.</p>
-          </div>
-
-          <div class="artisanal-card">
-            <div class="artisanal-icon"><i class="ph ph-truck"></i></div>
-            <span class="artisanal-tag">White-Glove Care</span>
-            <h3>Venue Express Delivery &amp; Digital Proofs</h3>
-            <p>Complimentary digital design mockups with climate-controlled, insured shipping delivered directly to your wedding planner or venue coordinator.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="marquee" aria-hidden="true">
-        <div class="marquee-track">
-          <span>Custom Monogram Wax Seals</span>
-          <span>Hand-Poured Organic Soy Candles</span>
-          <span>Artisanal Honey &amp; Jam Jars</span>
-          <span>Low 25-Piece Minimum Orders (MOQs)</span>
-          <span>Worldwide Express Venue Shipping</span>
-          <span>Custom Monogram Wax Seals</span>
-          <span>Hand-Poured Organic Soy Candles</span>
-          <span>Artisanal Honey &amp; Jam Jars</span>
-          <span>Low 25-Piece Minimum Orders (MOQs)</span>
-          <span>Worldwide Express Venue Shipping</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== FAVOR COLLECTIONS ==================== -->
-    <section class="container" id="edit">
-      <div class="section-header centered">
-        <span class="eyebrow centered" data-reveal>Favor Collections</span>
-        <h2 data-reveal style="--reveal-delay:1">Favors by Theme &amp; Style</h2>
-        <p class="subtext" data-reveal style="--reveal-delay:2">Curated favor ensembles designed to match classic,
-          rustic, bohemian, and modern wedding aesthetics.</p>
-      </div>
-
-      <div class="grid grid-3">
-
-        <a href="shop.html?theme=classic" class="tile" data-reveal>
-          <span class="tile-index">01</span>
-          <div class="tile-img">
-            <img src="https://i.etsystatic.com/61018451/r/il/5f6351/7102852623/il_fullxfull.7102852623_9kwr.jpg"
-              alt="Botanical Soy Candle Favors" loading="lazy">
-          </div>
-          <div class="tile-body">
-            <h3>Botanical Soy Candles</h3>
-            <span class="tile-cta">View Products <i class="ph ph-arrow-up-right"></i></span>
-          </div>
-        </a>
-
-        <a href="shop.html?theme=rustic" class="tile" data-reveal style="--reveal-delay:1">
-          <span class="tile-index">02</span>
-          <div class="tile-img">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ7RmMvhnUMnNeVPjn7yiqpqLJCzXuS4IbyGk0-sUlXLuEKzTYKoI4DiQ&s=10"
-              alt="Artisanal Honey &amp; Preserve Jars" loading="lazy">
-          </div>
-          <div class="tile-body">
-            <h3>Artisanal Honey Jars</h3>
-            <span class="tile-cta">View Products <i class="ph ph-arrow-up-right"></i></span>
-          </div>
-        </a>
-
-        <a href="shop.html?theme=luxe" class="tile" data-reveal style="--reveal-delay:2">
-          <span class="tile-index">03</span>
-          <div class="tile-img">
-            <img src="https://img.kwcdn.com/product/fancy/d5105d20-af40-4840-ac54-7619f3623c2e.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/webp"
-              alt="Bespoke Keepsake Gift Boxes" loading="lazy">
-          </div>
-          <div class="tile-body">
-            <h3>Deluxe Gift Hampers</h3>
-            <span class="tile-cta">View Products <i class="ph ph-arrow-up-right"></i></span>
-          </div>
-        </a>
-
-      </div>
-    </section>
-
-    <!-- ==================== NEW ARRIVALS ==================== -->
-    <section class="container" id="new">
-      <div class="section-header centered">
-        <span class="eyebrow centered" data-reveal>Most Requested</span>
-        <h2 data-reveal style="--reveal-delay:1">Popular Wedding Favors</h2>
-        <p class="subtext" data-reveal style="--reveal-delay:2">Handcrafted keepsakes loved by couples and wedding
-          guests alike.</p>
-        <div data-reveal style="--reveal-delay:3; margin-top: var(--space-4);">
-          <a href="shop.html" class="btn btn-primary">View All Favors <i class="ph ph-arrow-right"></i></a>
-        </div>
-      </div>
-
-      <div class="grid grid-4 product-grid" id="arrivals-grid">
-
-        <article class="card product-card" data-reveal>
-          <div class="card-media">
-            <a href="shop.html" class="card-img-wrapper">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStBC-p08w13qGRmg_hUWm3YkUCZfRXfAJBbiKetgjnAusO891Ygrtvpf24&s=10"
-                alt="Hand-Poured Rose Soy Candle" loading="lazy">
-            </a>
-            <span class="product-badge sale">Sale</span>
-            <button class="wishlist" aria-label="Save Rose Soy Candle"><i class="ph ph-heart"></i></button>
-            <div class="quick-add"><button class="quick-add-btn">Add to Order</button></div>
-          </div>
-          <div class="card-inner">
-            <span class="product-category">Candle Favors</span>
-            <a href="shop.html">
-              <h3 class="product-title">Hand-Poured Rose Soy Candle</h3>
-            </a>
-            <p class="product-meta"
-              style="font-size: var(--text-small); color: var(--color-text-muted); margin-bottom: var(--space-1);">
-              <strong>Details:</strong> 4 oz Glass &middot; Organic Oils &middot; <strong>MOQ:</strong> 25 pcs</p>
-            <div class="price"><span class="price-original">$6.00</span> <span class="price-sale">$4.50 <span
-                  style="font-size: var(--text-small); font-weight: normal; color: var(--color-text-muted);">/
-                  piece</span></span></div>
-            <div class="product-swatches" aria-hidden="true">
-              <span class="swatch" style="background:#E29F95; border: 1px solid #ddd;"></span>
-              <span class="swatch" style="background:#F5E2C8"></span>
-              <span class="swatch" style="background:#B86B77"></span>
-            </div>
-            <div class="product-actions">
-              <a href="enquire.html" class="size-guide-btn">Custom Proof</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card product-card" data-reveal style="--reveal-delay:1">
-          <div class="card-media">
-            <a href="shop.html" class="card-img-wrapper">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4lRR8xsWgf0O3edFnhxIMSrTlq1Vvsj80vfKEp-ILa1DORzOoNWHLmgY&s=10"
-                alt="Wildflower  Jar with Wooden Dipper" loading="lazy">
-            </a>
-            <span class="product-badge new">New</span>
-            <button class="wishlist" aria-label="Save Wildflower Honey Jar"><i class="ph ph-heart"></i></button>
-            <div class="quick-add"><button class="quick-add-btn">Add to Order</button></div>
-          </div>
-          <div class="card-inner">
-            <span class="product-category">Gourmet Favors</span>
-            <a href="shop.html">
-              <h3 class="product-title">Wildflower Honey Jar &amp; Dipper</h3>
-            </a>
-            <p class="product-meta"
-              style="font-size: var(--text-small); color: var(--color-text-muted); margin-bottom: var(--space-1);">
-              <strong>Details:</strong> 2 oz Hex Jar &middot; Organic Honey &middot; <strong>MOQ:</strong> 30 pcs</p>
-            <div class="price">$5.20 <span
-                style="font-size: var(--text-small); font-weight: normal; color: var(--color-text-muted);">/
-                piece</span></div>
-            <div class="product-swatches" aria-hidden="true">
-              <span class="swatch" style="background:#EAB308"></span>
-              <span class="swatch" style="background:#D97706"></span>
-            </div>
-            <div class="product-actions">
-              <a href="enquire.html" class="size-guide-btn">Custom Proof</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card product-card" data-reveal style="--reveal-delay:2">
-          <div class="card-media">
-            <a href="shop.html" class="card-img-wrapper">
-              <img src="https://m.media-amazon.com/images/I/716-oOfwbuL._AC_UF894,1000_QL80_.jpg"
-                alt="Engraved Wooden Coaster Pair" loading="lazy">
-            </a>
-            <button class="wishlist" aria-label="Save Engraved Coaster Pair"><i class="ph ph-heart"></i></button>
-            <div class="quick-add"><button class="quick-add-btn">Add to Order</button></div>
-          </div>
-          <div class="card-inner">
-            <span class="product-category">Keepsakes</span>
-            <a href="shop.html">
-              <h3 class="product-title">Engraved Marble &amp; Wood Coasters</h3>
-            </a>
-            <p class="product-meta"
-              style="font-size: var(--text-small); color: var(--color-text-muted); margin-bottom: var(--space-1);">
-              <strong>Details:</strong> Solid Oak &amp; Marble &middot; Laser Monogram &middot; <strong>MOQ:</strong> 25
-              pairs</p>
-            <div class="price">$7.80 <span
-                style="font-size: var(--text-small); font-weight: normal; color: var(--color-text-muted);">/ pair</span>
-            </div>
-            <div class="product-swatches" aria-hidden="true">
-              <span class="swatch" style="background:#E5E0D8"></span>
-              <span class="swatch" style="background:#8C6D58"></span>
-            </div>
-            <div class="product-actions">
-              <a href="enquire.html" class="size-guide-btn">Custom Proof</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card product-card" data-reveal style="--reveal-delay:3">
-          <div class="card-media">
-            <a href="shop.html" class="card-img-wrapper">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzGwAUNuGqfu1UDy_wZ6osgYRJq6zTQu1XYMouQyX1Nv0T4VTorutbM5rm&s=10"
-                alt="Silk Drawstring Pouch with Botanical Tea" loading="lazy">
-            </a>
-            <span class="product-badge new">New</span>
-            <button class="wishlist" aria-label="Save Silk Tea Pouch"><i class="ph ph-heart"></i></button>
-            <div class="quick-add"><button class="quick-add-btn">Add to Order</button></div>
-          </div>
-          <div class="card-inner">
-            <span class="product-category">Botanical Favors</span>
-            <a href="shop.html">
-              <h3 class="product-title">Silk Pouch with Artisanal Tea Blend</h3>
-            </a>
-            <p class="product-meta"
-              style="font-size: var(--text-small); color: var(--color-text-muted); margin-bottom: var(--space-1);">
-              <strong>Details:</strong> Velvet Pouch &middot; Organic Rose Tea &middot; <strong>MOQ:</strong> 30 pcs</p>
-            <div class="price">$4.80 <span
-                style="font-size: var(--text-small); font-weight: normal; color: var(--color-text-muted);">/
-                piece</span></div>
-            <div class="product-swatches" aria-hidden="true">
-              <span class="swatch" style="background:#C48B9F"></span>
-              <span class="swatch" style="background:#945D6E"></span>
-            </div>
-            <div class="product-actions">
-              <a href="enquire.html" class="size-guide-btn">Custom Proof</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card product-card" data-reveal style="--reveal-delay:4">
-          <div class="card-media">
-            <a href="shop.html" class="card-img-wrapper">
-              <img src="https://bytheleaf.in/cdn/shop/files/IMG_7188.png?v=1729782970&width=1445"
-                alt="Aromatherapy Bath Salt Vials" loading="lazy">
-            </a>
-            <span class="product-badge new">New</span>
-            <button class="wishlist" aria-label="Save Bath Salt Vials"><i class="ph ph-heart"></i></button>
-            <div class="quick-add"><button class="quick-add-btn">Add to Order</button></div>
-          </div>
-          <div class="card-inner">
-            <span class="product-category">Wellness Favors</span>
-            <a href="shop.html">
-              <h3 class="product-title">Lavender Aromatherapy Salt Vials</h3>
-            </a>
-            <p class="product-meta"
-              style="font-size: var(--text-small); color: var(--color-text-muted); margin-bottom: var(--space-1);">
-              <strong>Details:</strong> Glass Cork Vial &middot; Himalayan Salts &middot; <strong>MOQ:</strong> 25 pcs
+        <div class="row align-items-center g-5">
+          <div class="col-lg-7" data-reveal>
+            <span class="eyebrow">
+              <i class="bi bi-stars"></i> Premier Event Anchors &amp; Stage Presenters
+            </span>
+            <h1 class="hero-title">
+              Every Event Deserves a <span class="gold-highlight">Remarkable Voice.</span>
+            </h1>
+            <p class="hero-lead">
+              Elevate your stage with charismatic anchors, command-the-room corporate moderators, luxury wedding
+              emcees, and high-energy festival hosts who transform live moments into unforgettable experiences.
             </p>
-            <div class="price">$3.90 <span
-                style="font-size: var(--text-small); font-weight: normal; color: var(--color-text-muted);">/
-                piece</span></div>
-            <div class="product-swatches" aria-hidden="true">
-              <span class="swatch" style="background:#A58BB4"></span>
-              <span class="swatch" style="background:#E2D5E7"></span>
+            <div class="hero-cta-group">
+              <a href="hosts.html" class="btn-brand-gold">
+                <i class="bi bi-person-badge-fill"></i> Explore Our Hosts
+              </a>
+              <a href="contact.html" class="btn-brand-outline-gold">
+                <i class="bi bi-calendar2-check-fill"></i> Book Your Event
+              </a>
             </div>
-            <div class="product-actions">
-              <a href="enquire.html" class="size-guide-btn">Custom Proof</a>
-            </div>
-          </div>
-        </article>
 
-        <article class="card product-card" data-reveal style="--reveal-delay:5">
-          <div class="card-media">
-            <a href="shop.html" class="card-img-wrapper">
-              <img src="https://m.media-amazon.com/images/I/717lTqCBtVL._AC_UF1000,1000_QL80_.jpg"
-                alt="Deluxe Monogrammed Gift Hamper Box" loading="lazy">
-            </a>
-            <button class="wishlist" aria-label="Save Monogrammed Gift Hamper"><i class="ph ph-heart"></i></button>
-            <div class="quick-add"><button class="quick-add-btn">Add to Order</button></div>
-          </div>
-          <div class="card-inner">
-            <span class="product-category">Luxury Hampers</span>
-            <a href="shop.html">
-              <h3 class="product-title">Deluxe Monogrammed Gift Hamper</h3>
-            </a>
-            <p class="product-meta"
-              style="font-size: var(--text-small); color: var(--color-text-muted); margin-bottom: var(--space-1);">
-              <strong>Details:</strong> Custom Box &middot; Candle, Honey &amp; Wine Stopper &middot;
-              <strong>MOQ:</strong> 10 boxes</p>
-            <div class="price"><span class="price-original">$28.00</span> <span class="price-sale">$22.00 <span
-                  style="font-size: var(--text-small); font-weight: normal; color: var(--color-text-muted);">/
-                  box</span></span></div>
-            <div class="product-swatches" aria-hidden="true">
-              <span class="swatch" style="background:#2C1E21"></span>
-              <span class="swatch" style="background:#FAF7F5; border:1px solid #ccc;"></span>
-            </div>
-            <div class="product-actions">
-              <a href="enquire.html" class="size-guide-btn">Custom Proof</a>
+            <div class="hero-trust-metrics">
+              <div class="hero-metric-item">
+                <strong data-counter="2,800+">2,800+</strong>
+                <span>Live Stages Hosted</span>
+              </div>
+              <div class="hero-metric-item">
+                <strong data-counter="120+">120+</strong>
+                <span>Certified Stage Emcees</span>
+              </div>
+              <div class="hero-metric-item">
+                <strong data-counter="99%">99%</strong>
+                <span>Client Satisfaction Rate</span>
+              </div>
             </div>
           </div>
-        </article>
 
-      </div>
-    </section>
+          <div class="col-lg-5" data-reveal data-reveal-delay="150">
+            <div class="hero-visual-stage">
+              <div class="hero-main-portrait">
+                <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1000&q=85"
+                  alt="Professional event host speaking into a microphone on an illuminated stage">
+                <div class="hero-portrait-caption">
+                  <div>
+                    <h3>Julian Vance &amp; Aria Mehra</h3>
+                    <span>National Gala &amp; Broadcast Presenters</span>
+                  </div>
+                  <a href="hosts.html" class="btn-brand-purple btn-sm-custom" aria-label="View Host Roster">
+                    <i class="bi bi-arrow-up-right"></i>
+                  </a>
+                </div>
+              </div>
 
-    <!-- ==================== ATELIER / CRAFT ==================== -->
-    <section class="container" id="craft">
-      <div class="split" id="craft-split">
-        <div class="split-media" data-reveal>
-          <img src="https://assets.architecturaldigest.in/photos/6a54b6ef1927132597d60908/1:1/w_1055,h_1055,c_limit/2245b138-a46f-43e5-898e-d1f9fad1eed1.png"
-            alt="Inside the Wedding Gift Customization Studio" loading="lazy">
-        </div>
-        <div class="split-body centered" data-reveal style="--reveal-delay:1">
-          <span class="eyebrow centered">Our Studio Craft</span>
-          <h2>Handcrafted with Care,<br>Delivered at Scale</h2>
-          <p class="subtext">
-            Every gift box begins with ethically sourced botanical ingredients and ends with meticulous ribbon tying and
-            wax sealing.
-            We specialize in crafting bespoke wedding favors with low minimum order quantities and personalized mockups.
-          </p>
-          <a href="about.html" class="link-arrow">Our Story <i class="ph ph-arrow-right"></i></a>
+              <!-- Floating Event Visual Elements -->
+              <div class="floating-stage-badge badge-top-left">
+                <div class="floating-badge-icon">
+                  <i class="bi bi-mic-fill"></i>
+                </div>
+                <div class="floating-badge-text">
+                  <strong>Bilingual &amp; Global</strong>
+                  <span>15+ Languages Covered</span>
+                </div>
+              </div>
 
-          <div class="stat-line">
-            <div><strong>25+ MOQ</strong><span>Low Minimum Orders</span></div>
-            <div><strong>100%</strong><span>Custom Monograms</span></div>
-            <div><strong>24h</strong><span>Proof Turnaround</span></div>
+              <div class="floating-stage-badge badge-bottom-right">
+                <div class="floating-badge-icon">
+                  <i class="bi bi-trophy-fill"></i>
+                </div>
+                <div class="floating-badge-text">
+                  <strong>Award-Winning Roster</strong>
+                  <span>Corporate, Galas &amp; Weddings</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ==================== CUSTOM BRANDING ==================== -->
-    <section class="section-light-surface" id="evening" style="padding: var(--space-12) 0;">
-      <div class="container split" id="evening-split">
-        <div class="split-media" data-reveal>
-          <img src="assets/images/signature-suite-bespoke.jpg"
-            alt="Aura Favors Signature Suite - Bespoke rose gold wax seals, gold foil monograms, and velvet ribbon gift boxes" loading="lazy">
-        </div>
-        <div class="split-body centered" data-reveal style="--reveal-delay:1">
-          <span class="eyebrow centered">Signature Suite</span>
-          <h2>Bespoke Wax Seals &amp; Foil Monograms</h2>
-          <p class="subtext">
-            Transform your favors with hand-pressed rose gold wax seals, custom metallic crests, and velvet ribbon
-            finishes matching your exact wedding color swatches.
-          </p>
-          <a href="branding.html" class="btn btn-primary">Explore Custom Branding <i class="ph ph-arrow-right"></i></a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== TESTIMONIALS ==================== -->
-    <section class="container" id="testimonials">
-      <div class="section-header centered">
-        <span class="eyebrow centered" data-reveal>Love Notes</span>
-        <h2 data-reveal style="--reveal-delay:1">What Couples Say</h2>
-      </div>
-
-      <div class="grid grid-3" id="testimonials-grid">
-        <figure class="quote-card" data-reveal>
-          <div class="quote-mark" aria-hidden="true">&ldquo;</div>
-          <div class="quote-stars" aria-label="5 out of 5 stars">★★★★★</div>
-          <blockquote>The custom soy candle favors were the highlight of our reception! The rose gold wax seals matched
-            our invitations perfectly, and the low MOQ allowed us to order sample boxes beforehand.</blockquote>
-          <figcaption class="quote-author">
-            <img class="quote-avatar"
-              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80"
-              alt="Elena &amp; Marc" loading="lazy">
-            <span><strong>Elena &amp; Marc</strong>Tuscany · Married June 2026</span>
-          </figcaption>
-        </figure>
-
-        <figure class="quote-card" data-reveal style="--reveal-delay:1">
-          <div class="quote-mark" aria-hidden="true">&ldquo;</div>
-          <div class="quote-stars" aria-label="5 out of 5 stars">★★★★★</div>
-          <blockquote>Our guests loved the wildflower honey jars! The custom monogram tags and velvet ribbon made them
-            look so luxurious. Delivery to our venue was seamless.</blockquote>
-          <figcaption class="quote-author">
-            <img class="quote-avatar"
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80"
-              alt="James &amp; Chloe" loading="lazy">
-            <span><strong>James &amp; Chloe</strong>London · Married August 2026</span>
-          </figcaption>
-        </figure>
-
-        <figure class="quote-card" data-reveal style="--reveal-delay:2">
-          <div class="quote-mark" aria-hidden="true">&ldquo;</div>
-          <div class="quote-stars" aria-label="5 out of 5 stars">★★★★★</div>
-          <blockquote>As a wedding planner, Aura Favors is my go-to gift studio. Their attention to detail, fast
-            proofing, and reliable bulk shipping make my job effortless.</blockquote>
-          <figcaption class="quote-author">
-            <img class="quote-avatar"
-              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80"
-              alt="Sophia L." loading="lazy">
-            <span><strong>Sophia L.</strong>New York · Lead Wedding Planner</span>
-          </figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <!-- ==================== SERVICES ==================== -->
-    <section class="container" id="services">
-      <div class="section-header centered">
-        <span class="eyebrow centered" data-reveal>Studio Guarantees</span>
-        <h2 data-reveal style="--reveal-delay:1">Why Choose Aura Favors</h2>
-        <p class="subtext" data-reveal style="--reveal-delay:2">Four commitments we make to every couple and wedding
-          planner.
-        </p>
-      </div>
-      <div class="feature-row" data-reveal="fade">
-        <div class="feature-item">
-          <i class="ph ph-sliders"></i>
-          <h4>Low 25-Piece MOQs</h4>
-          <p>Flexible orders for any guest count</p>
-        </div>
-        <div class="feature-item">
-          <i class="ph ph-seal"></i>
-          <h4>Custom Monograms</h4>
-          <p>Hand-pressed wax &amp; foil crests</p>
-        </div>
-        <div class="feature-item">
-          <i class="ph ph-leaf"></i>
-          <h4>Organic Ingredients</h4>
-          <p>Soy wax, botanical teas &amp; pure honey</p>
-        </div>
-        <div class="feature-item">
-          <i class="ph ph-globe"></i>
-          <h4>Venue Freight</h4>
-          <p>Safe express shipping to your venue</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== NEWSLETTER ==================== -->
-    <section class="newsletter">
-      <div class="newsletter-media">
-        <img src="https://assets.architecturaldigest.in/photos/6a54b6ef1927132597d60908/1:1/w_1055,h_1055,c_limit/2245b138-a46f-43e5-898e-d1f9fad1eed1.png"
-          alt="Wedding favor gift box assembly" loading="lazy">
-      </div>
+    <!-- ==================== 2. FEATURED PROFESSIONAL HOSTS ==================== -->
+    <section class="section-padding section-ivory" id="featured-hosts">
       <div class="container">
-        <div class="newsletter-inner centered" data-reveal>
-          <span class="eyebrow centered">Wedding Concierge</span>
-          <h2>Get Your Custom Gift Consultation</h2>
-          <p class="subtext">Receive physical sample boxes, custom monogram mockups, and seasonal wedding favor
-            catalogues.</p>
-          <form class="newsletter-form"
-            onsubmit="event.preventDefault(); window.Aura && window.Aura.toast('Subscribed! Check your email for our favor guide.', 'ph-check-circle'); this.reset();">
-            <input type="email" class="form-control" placeholder="Enter your email address" aria-label="Email address"
-              required>
-            <button type="submit" class="btn btn-light">Request Guide</button>
-          </form>
-          <p class="newsletter-note">For couples, wedding planners, and event coordinators.</p>
+        <div class="row align-items-end justify-content-between mb-5 g-3">
+          <div class="col-lg-7" data-reveal>
+            <span class="eyebrow"><i class="bi bi-award-fill"></i> Signature Talent Roster</span>
+            <h2 class="section-title">Meet Our Featured <span class="text-purple">Stage Anchors</span></h2>
+            <p class="section-subtitle">
+              Hand-vetted presenters celebrated for magnetic stage presence, script mastery, spontaneous crowd
+              engagement, and impeccable timing.
+            </p>
+          </div>
+          <div class="col-lg-auto" data-reveal>
+            <a href="hosts.html" class="btn-brand-outline-dark">
+              View All 120+ Hosts <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Host 1 -->
+          <div class="col-md-6 col-xl-3" data-reveal>
+            <article class="host-card">
+              <div class="host-card-media">
+                <span class="host-specialty-badge">Corporate &amp; Galas</span>
+                <span class="host-exp-pill">11+ Yrs Exp</span>
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80"
+                  alt="Julian Vance — Corporate Keynote &amp; Award Show Emcee" loading="lazy">
+              </div>
+              <div class="host-card-body">
+                <h3 class="host-card-title">Julian Vance</h3>
+                <div class="host-card-role">Executive Summit &amp; Award Night Anchor</div>
+                <div class="host-meta-row">
+                  <span><i class="bi bi-translate"></i> EN, FR, ES</span>
+                  <span><i class="bi bi-mic"></i> 620+ Shows</span>
+                </div>
+                <p class="host-bio">
+                  Renowned for commanding Fortune 500 leadership summits, televised award galas, and diplomatic forums
+                  with razor-sharp poise.
+                </p>
+                <div class="host-card-actions">
+                  <a href="hosts.html" class="btn-brand-outline-dark">Profile</a>
+                  <a href="contact.html?host=Julian%20Vance" class="btn-brand-gold">Enquire</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Host 2 -->
+          <div class="col-md-6 col-xl-3" data-reveal data-reveal-delay="100">
+            <article class="host-card">
+              <div class="host-card-media">
+                <span class="host-specialty-badge">Luxury Weddings</span>
+                <span class="host-exp-pill">9+ Yrs Exp</span>
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80"
+                  alt="Aria Mehra — Luxury Destination Wedding Emcee" loading="lazy">
+              </div>
+              <div class="host-card-body">
+                <h3 class="host-card-title">Aria Mehra</h3>
+                <div class="host-card-role">Destination Wedding &amp; Sangeet Host</div>
+                <div class="host-meta-row">
+                  <span><i class="bi bi-translate"></i> EN, HI, PA</span>
+                  <span><i class="bi bi-mic"></i> 480+ Shows</span>
+                </div>
+                <p class="host-bio">
+                  Brings warmth, infectious joy, and seamless family storytelling to royal palace weddings, sangeet
+                  nights, and black-tie receptions.
+                </p>
+                <div class="host-card-actions">
+                  <a href="hosts.html" class="btn-brand-outline-dark">Profile</a>
+                  <a href="contact.html?host=Aria%20Mehra" class="btn-brand-gold">Enquire</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Host 3 -->
+          <div class="col-md-6 col-xl-3" data-reveal data-reveal-delay="200">
+            <article class="host-card">
+              <div class="host-card-media">
+                <span class="host-specialty-badge">Concerts &amp; Arenas</span>
+                <span class="host-exp-pill">8+ Yrs Exp</span>
+                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=800&q=80"
+                  alt="Marcus Sterling — Live Concert &amp; Sports Arena Emcee" loading="lazy">
+              </div>
+              <div class="host-card-body">
+                <h3 class="host-card-title">Marcus Sterling</h3>
+                <div class="host-card-role">Live Concert, Arena &amp; Festival Emcee</div>
+                <div class="host-meta-row">
+                  <span><i class="bi bi-translate"></i> EN, DE</span>
+                  <span><i class="bi bi-mic"></i> 540+ Shows</span>
+                </div>
+                <p class="host-bio">
+                  High-voltage crowd architect who electrifies 25,000-seat music festivals, e-sports finals, and
+                  headline celebrity tours.
+                </p>
+                <div class="host-card-actions">
+                  <a href="hosts.html" class="btn-brand-outline-dark">Profile</a>
+                  <a href="contact.html?host=Marcus%20Sterling" class="btn-brand-gold">Enquire</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Host 4 -->
+          <div class="col-md-6 col-xl-3" data-reveal data-reveal-delay="300">
+            <article class="host-card">
+              <div class="host-card-media">
+                <span class="host-specialty-badge">Bilingual &amp; Red Carpet</span>
+                <span class="host-exp-pill">10+ Yrs Exp</span>
+                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&q=80"
+                  alt="Elena Rostova — Multilingual Red Carpet &amp; Brand Launch Presenter" loading="lazy">
+              </div>
+              <div class="host-card-body">
+                <h3 class="host-card-title">Elena Rostova</h3>
+                <div class="host-card-role">Multilingual Gala &amp; Celebrity Presenter</div>
+                <div class="host-meta-row">
+                  <span><i class="bi bi-translate"></i> EN, IT, FR, AR</span>
+                  <span><i class="bi bi-mic"></i> 510+ Shows</span>
+                </div>
+                <p class="host-bio">
+                  Effortlessly bridges global audiences at luxury automotive reveals, fashion week showcases, and
+                  international film festivals.
+                </p>
+                <div class="host-card-actions">
+                  <a href="hosts.html" class="btn-brand-outline-dark">Profile</a>
+                  <a href="contact.html?host=Elena%20Rostova" class="btn-brand-gold">Enquire</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. EVENT CATEGORIES ==================== -->
+    <section class="section-padding section-white" id="event-categories">
+      <div class="container">
+        <div class="text-center mb-5" data-reveal>
+          <span class="eyebrow"><i class="bi bi-grid-fill"></i> Tailored Stage Expertise</span>
+          <h2 class="section-title">Anchors Curated for <span class="text-purple">Every Occasion</span></h2>
+          <p class="section-subtitle">
+            From boardroom keynotes to stadium concerts, we match your event's exact tone, audience demographics, and
+            run-of-show complexity.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Category 1: Corporate Events -->
+          <div class="col-md-6 col-lg-4" data-reveal>
+            <a href="services.html#corporate" class="category-card">
+              <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=900&q=80"
+                alt="Corporate Event presenter speaking at an international conference stage" loading="lazy">
+              <div class="category-card-overlay">
+                <span class="category-icon-badge"><i class="bi bi-briefcase-fill"></i></span>
+                <h3>Corporate Events</h3>
+                <p>Executive summits, product launches, AGMs, and moderated leadership panels.</p>
+                <span class="category-link-text">Explore Corporate Hosts <i class="bi bi-arrow-right"></i></span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Category 2: Weddings -->
+          <div class="col-md-6 col-lg-4" data-reveal data-reveal-delay="100">
+            <a href="services.html#weddings" class="category-card">
+              <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80"
+                alt="Luxury wedding celebration reception hosted by a professional emcee" loading="lazy">
+              <div class="category-card-overlay">
+                <span class="category-icon-badge"><i class="bi bi-heart-fill"></i></span>
+                <h3>Weddings</h3>
+                <p>Destination receptions, sangeet nights, cocktail soirées, and royal grand entries.</p>
+                <span class="category-link-text">Explore Wedding Emcees <i class="bi bi-arrow-right"></i></span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Category 3: Award Nights -->
+          <div class="col-md-6 col-lg-4" data-reveal data-reveal-delay="200">
+            <a href="services.html#awards" class="category-card">
+              <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=900&q=80"
+                alt="Glamorous black-tie award ceremony stage with golden lighting" loading="lazy">
+              <div class="category-card-overlay">
+                <span class="category-icon-badge"><i class="bi bi-trophy-fill"></i></span>
+                <h3>Award Nights</h3>
+                <p>Red-carpet galas, industry recognition ceremonies, and televised trophy presentations.</p>
+                <span class="category-link-text">Explore Gala Anchors <i class="bi bi-arrow-right"></i></span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Category 4: Concerts -->
+          <div class="col-md-6 col-lg-4" data-reveal>
+            <a href="services.html#concerts" class="category-card">
+              <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=900&q=80"
+                alt="Live concert arena crowd and illuminated stage show" loading="lazy">
+              <div class="category-card-overlay">
+                <span class="category-icon-badge"><i class="bi bi-music-note-beamed"></i></span>
+                <h3>Concerts</h3>
+                <p>Arena tours, music festivals, DJ nights, and high-energy crowd hype hosting.</p>
+                <span class="category-link-text">Explore Concert Emcees <i class="bi bi-arrow-right"></i></span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Category 5: College Festivals -->
+          <div class="col-md-6 col-lg-4" data-reveal data-reveal-delay="100">
+            <a href="services.html#college" class="category-card">
+              <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=900&q=80"
+                alt="Vibrant college cultural festival crowd cheering under stage lights" loading="lazy">
+              <div class="category-card-overlay">
+                <span class="category-icon-badge"><i class="bi bi-lightning-charge-fill"></i></span>
+                <h3>College Festivals</h3>
+                <p>Youth fests, battle of bands, campus fashion shows, and interactive student arenas.</p>
+                <span class="category-link-text">Explore Campus Hosts <i class="bi bi-arrow-right"></i></span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Category 6: Private Celebrations -->
+          <div class="col-md-6 col-lg-4" data-reveal data-reveal-delay="200">
+            <a href="services.html#private" class="category-card">
+              <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=900&q=80"
+                alt="Upscale private milestone celebration and gala party" loading="lazy">
+              <div class="category-card-overlay">
+                <span class="category-icon-badge"><i class="bi bi-stars"></i></span>
+                <h3>Private Celebrations</h3>
+                <p>Milestone anniversaries, VIP birthday galas, yacht soirées, and luxury family gatherings.</p>
+                <span class="category-link-text">Explore Private Hosts <i class="bi bi-arrow-right"></i></span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 4. WHY CHOOSE OUR EMCEES (4 PREMIUM FEATURE CARDS) ==================== -->
+    <section class="section-padding section-dark" id="why-choose-us">
+      <div class="container">
+        <div class="text-center mb-5" data-reveal>
+          <span class="eyebrow"><i class="bi bi-shield-check"></i> The Gold Standard in Stagecraft</span>
+          <h2 class="section-title">Why Event Organizers <span class="text-gold">Choose Our Emcees</span></h2>
+          <p class="section-subtitle">
+            A great host does far more than read cue cards—they calibrate room energy, rescue live schedule shifts,
+            and keep every guest captivated.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3" data-reveal>
+            <div class="feature-card-luxury">
+              <div class="feature-icon-box">
+                <i class="bi bi-mic-fill"></i>
+              </div>
+              <h3>Auditioned Stage Mastery</h3>
+              <p>
+                Only the top 4% of auditioning presenters enter our roster—vetted for vocal clarity, teleprompter
+                fluency, and live improvisation.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3" data-reveal data-reveal-delay="100">
+            <div class="feature-card-luxury">
+              <div class="feature-icon-box">
+                <i class="bi bi-file-earmark-text-fill"></i>
+              </div>
+              <h3>Bespoke Script Architecture</h3>
+              <p>
+                Our hosts collaborate with your show directors beforehand to craft custom intros, brand messaging,
+                and culturally sensitive humor.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3" data-reveal data-reveal-delay="200">
+            <div class="feature-card-luxury">
+              <div class="feature-icon-box">
+                <i class="bi bi-people-fill"></i>
+              </div>
+              <h3>Dynamic Crowd Command</h3>
+              <p>
+                Whether warming up 2,000 C-suite delegates or energizing a wedding dancefloor, our anchors read and
+                elevate audience pulse in real time.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3" data-reveal data-reveal-delay="300">
+            <div class="feature-card-luxury">
+              <div class="feature-icon-box">
+                <i class="bi bi-clock-history"></i>
+              </div>
+              <h3>Guaranteed Backup &amp; Punctuality</h3>
+              <p>
+                Every booking includes early technical soundcheck arrival, wardrobe styling alignment, and an
+                agency-backed standby host guarantee.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 5. EVENT HIGHLIGHTS & PERFORMANCE SHOWCASE ==================== -->
+    <section class="section-padding section-ivory" id="performance-showcase">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6" data-reveal>
+            <div class="position-relative">
+              <div class="rounded-4 overflow-hidden shadow-lg" style="border: 2px solid var(--color-accent);">
+                <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=1100&q=85"
+                  alt="Emcee commanding a packed auditorium keynote stage" loading="lazy">
+              </div>
+              <div class="row g-3 mt-2">
+                <div class="col-6">
+                  <div class="rounded-3 overflow-hidden shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=600&q=80"
+                      alt="Live festival night performance and laser lighting" loading="lazy"
+                      style="height: 170px; width: 100%; object-fit: cover;">
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="rounded-3 overflow-hidden shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=600&q=80"
+                      alt="Champagne toast hosted at a luxury gala banquet" loading="lazy"
+                      style="height: 170px; width: 100%; object-fit: cover;">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-reveal data-reveal-delay="150">
+            <span class="eyebrow"><i class="bi bi-broadcast"></i> Live Stage Excellence</span>
+            <h2 class="section-title">Commanding the Spotlight at <span class="text-purple">Marquee Events</span></h2>
+            <p class="mb-4">
+              From international tech keynotes in Singapore and Dubai to royal palace weddings in Udaipur and arena
+              music festivals in London, our presenters bring broadcast-caliber polish to every stage cue.
+            </p>
+
+            <div class="d-flex flex-column gap-3 mb-4">
+              <div class="p-3 rounded-3 bg-white border d-flex align-items-start gap-3">
+                <div class="floating-badge-icon"><i class="bi bi-sliders"></i></div>
+                <div>
+                  <h3 class="h5 mb-1">Show-Flow &amp; Stage Manager Sync</h3>
+                  <p class="mb-0 text-muted-custom small">Seamless in-ear monitor (IEM) communication with audio-visual
+                    directors, lighting cues, and VIP protocol teams.</p>
+                </div>
+              </div>
+
+              <div class="p-3 rounded-3 bg-white border d-flex align-items-start gap-3">
+                <div class="floating-badge-icon"><i class="bi bi-globe2"></i></div>
+                <div>
+                  <h3 class="h5 mb-1">Multilingual &amp; Cross-Cultural Fluency</h3>
+                  <p class="mb-0 text-muted-custom small">Instant code-switching across English, Hindi, French, Arabic,
+                    Spanish, Mandarin, and regional languages.</p>
+                </div>
+              </div>
+
+              <div class="p-3 rounded-3 bg-white border d-flex align-items-start gap-3">
+                <div class="floating-badge-icon"><i class="bi bi-stars"></i></div>
+                <div>
+                  <h3 class="h5 mb-1">Bespoke Couture Wardrobe Styling</h3>
+                  <p class="mb-0 text-muted-custom small">Black-tie tuxedos, couture evening gowns, or traditional
+                    regalia curated to complement your event's visual palette.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex flex-wrap gap-3">
+              <a href="gallery.html" class="btn-brand-purple">
+                <i class="bi bi-images"></i> View Stage Gallery
+              </a>
+              <a href="services.html" class="btn-brand-outline-dark">
+                Explore All Services
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 6. BOOKING PROCESS IN THREE SIMPLE STEPS ==================== -->
+    <section class="section-padding section-white" id="booking-process">
+      <div class="container">
+        <div class="text-center mb-5" data-reveal>
+          <span class="eyebrow"><i class="bi bi-check2-circle"></i> Effortless Talent Curation</span>
+          <h2 class="section-title">How to Book Your <span class="text-purple">Ideal Event Host</span></h2>
+          <p class="section-subtitle">
+            Our dedicated talent producers take you from initial brief to showtime confirmation in three streamlined
+            steps.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-4" data-reveal>
+            <div class="step-card">
+              <span class="step-number">01</span>
+              <h3>Share Your Event Brief</h3>
+              <p class="text-muted-custom mb-3">
+                Tell us your event date, venue city, audience profile, preferred languages, and desired hosting energy
+                via our quick enquiry form.
+              </p>
+              <span class="small fw-semibold" style="color: var(--color-secondary);">
+                <i class="bi bi-clock"></i> Response within 2 business hours
+              </span>
+            </div>
+          </div>
+
+          <div class="col-lg-4" data-reveal data-reveal-delay="120">
+            <div class="step-card">
+              <span class="step-number">02</span>
+              <h3>Review Showreels &amp; Shortlist</h3>
+              <p class="text-muted-custom mb-3">
+                Receive a curated lookbook of 3–5 available anchors complete with live stage showreels, fee quotes,
+                and a complimentary discovery call.
+              </p>
+              <span class="small fw-semibold" style="color: var(--color-secondary);">
+                <i class="bi bi-camera-video"></i> Direct video call with your chosen host
+              </span>
+            </div>
+          </div>
+
+          <div class="col-lg-4" data-reveal data-reveal-delay="240">
+            <div class="step-card">
+              <span class="step-number">03</span>
+              <h3>Script Prep &amp; Showtime</h3>
+              <p class="text-muted-custom mb-3">
+                Lock in your booking contract. Your emcee joins pre-production run-of-show briefings and arrives
+                on-site early for rehearsal and soundcheck.
+              </p>
+              <span class="small fw-semibold" style="color: var(--color-secondary);">
+                <i class="bi bi-shield-fill-check"></i> 100% On-Stage Excellence Guarantee
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 7. CLIENT TESTIMONIALS ==================== -->
+    <section class="section-padding section-ivory" id="testimonials">
+      <div class="container">
+        <div class="text-center mb-5" data-reveal>
+          <span class="eyebrow"><i class="bi bi-chat-quote-fill"></i> Rave Reviews</span>
+          <h2 class="section-title">Trusted by Leading <span class="text-purple">Event Producers</span></h2>
+          <p class="section-subtitle">
+            Hear from corporate communications heads, luxury wedding planners, and festival directors who booked their
+            stage hosts through us.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-4" data-reveal>
+            <div class="testimonial-card">
+              <div>
+                <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p class="testimonial-quote">
+                  &ldquo;Julian hosted our 3-day Global FinTech Summit for 1,800 delegates. When a keynote speaker's
+                  flight was delayed by 25 minutes, Julian effortlessly led an unscripted executive Q&amp;A that became
+                  the highest-rated session of the conference!&rdquo;
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80"
+                  alt="Victoria Langley" loading="lazy">
+                <div>
+                  <h4>Victoria Langley</h4>
+                  <span>VP of Global Events, NexaCore Enterprise</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4" data-reveal data-reveal-delay="120">
+            <div class="testimonial-card">
+              <div>
+                <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p class="testimonial-quote">
+                  &ldquo;Aria Mehra made our destination wedding sangeet and grand reception feel like a film awards
+                  night! Both sides of the family—from grandparents to college friends—were laughing, cheering, and on
+                  their feet all evening.&rdquo;
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80"
+                  alt="Rohan &amp; Sneha Kapoor" loading="lazy">
+                <div>
+                  <h4>Rohan &amp; Sneha Kapoor</h4>
+                  <span>Destination Wedding Couple, Udaipur</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4" data-reveal data-reveal-delay="240">
+            <div class="testimonial-card">
+              <div>
+                <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p class="testimonial-quote">
+                  &ldquo;As a luxury event production house, Anchor &amp; Emcee Booking Service is our first call.
+                  Their bilingual presenters are punctual, immaculately styled, and handle high-pressure live broadcast
+                  cues without missing a beat.&rdquo;
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80"
+                  alt="Damien Vance-Clarke" loading="lazy">
+                <div>
+                  <h4>Damien Clarke</h4>
+                  <span>Show Director, Lumina Live Productions</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 8. FINAL CTA BOOKING BANNER ==================== -->
+    <section class="section-padding section-white">
+      <div class="container">
+        <div class="cta-banner-box" data-reveal>
+          <div class="cta-banner-bg">
+            <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=1600&q=80"
+              alt="Concert stage lights and cheering audience" loading="lazy">
+          </div>
+          <div class="row align-items-center justify-content-between g-4">
+            <div class="col-lg-7">
+              <span class="eyebrow" style="color: var(--color-accent); border-color: var(--border-gold);">
+                <i class="bi bi-calendar-event-fill"></i> Dates Fill Fast for Peak Season
+              </span>
+              <h2 class="section-title text-white mb-3">
+                Ready to Give Your Next Event an <span class="text-gold">Unforgettable Voice?</span>
+              </h2>
+              <p class="mb-0" style="color: rgba(250, 248, 243, 0.85); font-size: var(--fs-lead);">
+                Connect with our senior talent desk today for tailored host recommendations, live showreels, and
+                transparent event packages.
+              </p>
+            </div>
+            <div class="col-lg-auto d-flex flex-wrap gap-3">
+              <a href="contact.html" class="btn-brand-gold">
+                <i class="bi bi-send-fill"></i> Request Host Availability
+              </a>
+              <a href="hosts.html" class="btn-brand-outline-gold">
+                Browse Host Directory
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- ==================== FOOTER ==================== -->
-  <footer class="footer">
+  <!-- ==================== PROFESSIONAL FOOTER ==================== -->
+  <footer class="site-footer">
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <a href="index.html" class="logo"><img src="assets/images/aura-logo.svg" alt="Aura Favors"></a>
-          <p class="footer-about">Charming, personalized wedding favors and artisanal gift hampers crafted with luxury
-            materials, custom monograms, and low MOQs.</p>
-          <div class="footer-social">
-            <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
-            <a href="#" aria-label="Pinterest"><i class="ph ph-pinterest-logo"></i></a>
-            <a href="#" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+      <div class="row g-4 justify-content-between">
+        <div class="col-lg-4">
+          <a href="index.html" class="brand-logo mb-3">
+            <img src="assets/images/logo.svg" alt="Anchor &amp; Emcee Booking Service" width="240" height="48">
+          </a>
+          <p class="mt-2 mb-3" style="color: rgba(250, 248, 243, 0.75); font-size: 0.93rem;">
+            The premier talent booking agency for corporate event anchors, luxury wedding emcees, award ceremony
+            presenters, bilingual moderators, and live concert hosts.
+          </p>
+          <div class="social-links" aria-label="Social Media Links">
+            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i
+                class="bi bi-instagram"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i
+                class="bi bi-youtube"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i
+                class="bi bi-linkedin"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="X Twitter"><i
+                class="bi bi-twitter-x"></i></a>
           </div>
         </div>
-        <div class="footer-col">
-          <h4>Favors</h4>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <h3 class="footer-heading">Quick Links</h3>
           <ul class="footer-links">
-            <li><a href="shop.html">Candle Favors</a></li>
-            <li><a href="shop.html">Honey &amp; Jam Jars</a></li>
-            <li><a href="shop.html">Engraved Keepsakes</a></li>
-            <li><a href="shop.html">Silk Pouches</a></li>
-            <li><a href="shop.html">Luxury Hampers</a></li>
+            <li><a href="index.html"><i class="bi bi-chevron-right"></i> Home</a></li>
+            <li><a href="hosts.html"><i class="bi bi-chevron-right"></i> Our Hosts</a></li>
+            <li><a href="gallery.html"><i class="bi bi-chevron-right"></i> Event Gallery</a></li>
+            <li><a href="about.html"><i class="bi bi-chevron-right"></i> About Agency</a></li>
+            <li><a href="services.html"><i class="bi bi-chevron-right"></i> Services</a></li>
+            <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Book an Emcee</a></li>
           </ul>
         </div>
-        <div class="footer-col">
-          <h4>Customization</h4>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <h3 class="footer-heading">Hosting Services</h3>
           <ul class="footer-links">
-            <li><a href="branding.html">Monogram Stamps</a></li>
-            <li><a href="branding.html">Wax Seals</a></li>
-            <li><a href="branding.html">Custom Ribbon</a></li>
-            <li><a href="bulk.html">Bulk Orders</a></li>
-            <li><a href="enquire.html">Sample Box</a></li>
+            <li><a href="services.html#corporate"><i class="bi bi-chevron-right"></i> Corporate Event Hosting</a></li>
+            <li><a href="services.html#weddings"><i class="bi bi-chevron-right"></i> Wedding Emcee Services</a></li>
+            <li><a href="services.html#awards"><i class="bi bi-chevron-right"></i> Award Ceremony Hosting</a></li>
+            <li><a href="services.html#concerts"><i class="bi bi-chevron-right"></i> Concert &amp; Live Show Anchoring</a></li>
+            <li><a href="services.html#college"><i class="bi bi-chevron-right"></i> College Festival Hosting</a></li>
+            <li><a href="services.html#bilingual"><i class="bi bi-chevron-right"></i> Bilingual &amp; Global Anchors</a></li>
           </ul>
         </div>
-        <div class="footer-col">
-          <h4>Studio</h4>
+
+        <div class="col-md-4 col-lg-3">
+          <h3 class="footer-heading">Booking Desk</h3>
           <ul class="footer-links">
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="blog.html">Gift Journal</a></li>
-            <li><a href="contact.html">Contact Studio</a></li>
-            <li><a href="enquire.html">Enquire</a></li>
+            <li>
+              <a href="tel:+18009457824">
+                <i class="bi bi-telephone-fill" style="color: var(--color-accent);"></i> +1 (800) 945-STAGE
+              </a>
+            </li>
+            <li>
+              <a href="mailto:bookings@anchoremcee.com">
+                <i class="bi bi-envelope-fill" style="color: var(--color-accent);"></i> bookings@anchoremcee.com
+              </a>
+            </li>
+            <li class="d-flex align-items-start gap-2" style="color: rgba(250, 248, 243, 0.75); font-size: 0.9rem;">
+              <i class="bi bi-geo-alt-fill mt-1" style="color: var(--color-accent);"></i>
+              <span>Suite 1400, Starlight Media Tower, 580 Madison Ave, New York, NY</span>
+            </li>
+            <li class="d-flex align-items-center gap-2" style="color: var(--color-accent); font-size: 0.86rem;">
+              <i class="bi bi-clock-fill"></i>
+              <span>24/7 Live Event Support Desk</span>
+            </li>
           </ul>
         </div>
       </div>
+
       <div class="footer-bottom">
-        <span>&copy; 2026 Aura Favors — Wedding &amp; Custom Gift Studio</span>
-        <nav>
-          <a href="#">Privacy</a>
-          <a href="#">Terms</a>
-        </nav>
+        <span>&copy; 2026 Anchor &amp; Emcee Booking Service. All rights reserved.</span>
+        <div class="d-flex gap-3">
+          <a href="about.html">Editorial Standards</a>
+          <a href="services.html">Booking Terms</a>
+          <a href="contact.html">Support</a>
+        </div>
       </div>
     </div>
   </footer>
 
-  <!-- Customization Modal -->
-  <div class="modal-overlay">
-    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-      <button class="modal-close" aria-label="Close modal"><i class="ph ph-x"></i></button>
-      <div class="modal-body">
-        <!-- Injected via shop.js -->
-      </div>
-    </div>
-  </div>
+  <!-- Back to Top -->
+  <button class="back-to-top-btn" type="button" aria-label="Scroll back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
 
-  <!-- Toast & Controls -->
-  <div class="toast" role="status" aria-live="polite"><i class="ph ph-check-circle"></i><span></span></div>
-  <button class="back-to-top" type="button" aria-label="Back to top"><i class="ph ph-arrow-up"></i></button>
-
+  <!-- Bootstrap JS & Custom Script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/cart.js"></script>
-  <script src="assets/js/shop.js"></script>
 </body>
 
 </html>

@@ -1,303 +1,668 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light" dir="ltr">
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aura Favors | Contact &amp; Studio Enquiries</title>
-  <meta name="description" content="Get in touch with Aura Favors. Submit wedding favor bulk enquiries, request scent sample kits, or schedule a custom monogram consultation.">
-  <meta name="theme-color" content="#2C1E21">
+  <title>Book an Emcee &amp; Contact Us | Anchor &amp; Emcee Booking Service</title>
+  <meta name="description"
+    content="Submit your event booking enquiry to hire a professional corporate anchor, wedding emcee, award show presenter, bilingual moderator, or live concert host.">
+  <meta name="theme-color" content="#101827">
   <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Bootstrap 5.3 CSS & Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="assets/css/style.css?v=2.0">
-  <link rel="stylesheet" href="assets/css/rtl.css">
-  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
 
-  <div class="drawer-overlay"></div>
-
-  <aside class="drawer" aria-label="Mobile navigation">
-    <div class="drawer-header">
-      <a href="index.html" class="logo"><img src="assets/images/aura-logo.svg" alt="Aura Favors"></a>
-      <button class="drawer-close" aria-label="Close menu"><i class="ph ph-x"></i></button>
-    </div>
-    <nav class="drawer-links">
-      <a href="index.html">Home</a>
-      <a href="home2.html">Home2</a>
-      <a href="about.html">About</a>
-      <a href="shop.html">Products</a>
-      <a href="branding.html">Branding</a>
-      <a href="bulk.html">Bulk</a>
-      <a href="blog.html">Stories</a>
-      <a href="contact.html" class="active">Contact</a>
-    </nav>
-    <div class="drawer-actions">
-      <div class="drawer-utility">
-        <button class="rtl-toggle" aria-label="Toggle text direction"></button>
-        <button class="theme-toggle" aria-label="Toggle theme"><i class="ph ph-moon"></i></button>
-        <span class="drawer-meta">Appearance &amp; Direction</span>
-      </div>
-      <a href="enquire.html" class="btn btn-primary btn-full" style="margin-top: var(--space-3); justify-content: center;">Enquire</a>
-      <p class="drawer-meta">Studio Care — +1 800 555 0199</p>
-    </div>
-  </aside>
-
-  <header class="navbar">
+  <!-- ==================== STICKY HEADER ==================== -->
+  <header class="site-header" id="topHeader">
     <div class="container">
-      <a href="index.html" class="logo"><img src="assets/images/aura-logo.svg" alt="Aura Favors"></a>
-      <nav class="nav-links" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="home2.html">Home2</a>
-        <a href="about.html">About</a>
-        <a href="shop.html">Products</a>
-        <a href="branding.html">Branding</a>
-        <a href="bulk.html">Bulk</a>
-        <a href="blog.html">Stories</a>
-        <a href="contact.html" class="active">Contact</a>
-      </nav>
-      <div class="nav-actions">
-        <button class="rtl-toggle" aria-label="Toggle text direction"></button>
-        <button class="theme-toggle" aria-label="Toggle dark mode"><i class="ph ph-moon"></i></button>
-        <a href="enquire.html" class="btn btn-sm btn-primary desk-only">Enquire</a>
-        <button class="hamburger" aria-label="Open menu"><i class="ph ph-list"></i></button>
+      <div class="header-inner">
+        <a href="index.html" class="brand-logo" aria-label="Anchor &amp; Emcee Booking Service Home">
+          <img src="assets/images/logo.svg" alt="Anchor &amp; Emcee Booking Service Logo" width="250" height="50">
+        </a>
+
+        <nav aria-label="Primary Navigation">
+          <ul class="desktop-nav">
+            <li><a href="index.html" class="nav-link-item">Home</a></li>
+            <li><a href="home2.html" class="nav-link-item">Home 2</a></li>
+            <li><a href="hosts.html" class="nav-link-item">Hosts</a></li>
+            <li><a href="gallery.html" class="nav-link-item">Gallery</a></li>
+            <li><a href="about.html" class="nav-link-item">About</a></li>
+            <li><a href="services.html" class="nav-link-item">Services</a></li>
+            <li><a href="contact.html" class="nav-link-item active" aria-current="page">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <button type="button" class="header-util-btn rtl-toggle-btn" aria-label="Switch to Right-to-Left (RTL)" aria-pressed="false" title="Toggle RTL/LTR">
+            <i class="bi bi-arrow-left-right"></i> <span class="rtl-btn-text">RTL</span>
+          </button>
+          <button type="button" class="header-util-btn theme-toggle-btn" aria-label="Switch to dark theme" aria-pressed="false" title="Toggle Dark/Light Theme">
+            <i class="bi bi-moon-stars-fill"></i>
+          </button>
+          <a href="#booking-form-section" class="btn-brand-gold btn-sm-custom header-cta-desktop">
+            <i class="bi bi-mic-fill"></i> Book an Emcee
+          </a>
+          <button class="mobile-menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false"
+            aria-controls="mobileNavDrawer">
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
       </div>
     </div>
   </header>
 
-  <main>
-
-    <header class="page-header container">
-      <span class="eyebrow centered" data-reveal>Studio Concierge</span>
-      <h1 data-reveal style="--reveal-delay:1">Contact &amp; Enquiries</h1>
-      <p class="subtext" data-reveal style="--reveal-delay:2">Connect with our wedding favor specialists. We respond to all custom quote and sample inquiries within 12 hours.</p>
-    </header>
-
-    <!-- Contact channels -->
-    <div class="container">
-      <div class="feature-row" data-reveal="fade">
-        <div class="feature-item">
-          <i class="ph ph-phone"></i>
-          <h4>Telephone</h4>
-          <p>+1 800 555 0199</p>
-        </div>
-        <div class="feature-item">
-          <i class="ph ph-envelope-simple"></i>
-          <h4>Email</h4>
-          <p>concierge@aurafavors.example</p>
-        </div>
-        <div class="feature-item">
-          <i class="ph ph-calendar-check"></i>
-          <h4>Studio Consultations</h4>
-          <p>By appointment request</p>
-        </div>
-        <div class="feature-item">
-          <i class="ph ph-chat-circle"></i>
-          <h4>Concierge Hours</h4>
-          <p>Weekdays, 9am – 6pm EST</p>
-        </div>
+  <!-- ==================== MOBILE NAVIGATION DRAWER ==================== -->
+  <div class="mobile-nav-overlay" aria-hidden="true"></div>
+  <aside class="mobile-nav-drawer" id="mobileNavDrawer" aria-label="Mobile Navigation" aria-hidden="true">
+    <div>
+      <div class="mobile-drawer-header">
+        <a href="index.html" class="brand-logo">
+          <img src="assets/images/logo.svg" alt="Anchor &amp; Emcee Booking Service" width="210" height="42">
+        </a>
+        <button class="mobile-drawer-close" type="button" aria-label="Close navigation menu">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li><a href="index.html"><span>Home</span> <i class="bi bi-chevron-right"></i></a></li>
+        <li><a href="home2.html"><span>Home 2</span> <i class="bi bi-chevron-right"></i></a></li>
+        <li><a href="hosts.html"><span>Hosts</span> <i class="bi bi-chevron-right"></i></a></li>
+        <li><a href="gallery.html"><span>Gallery</span> <i class="bi bi-chevron-right"></i></a></li>
+        <li><a href="about.html"><span>About</span> <i class="bi bi-chevron-right"></i></a></li>
+        <li><a href="services.html"><span>Services</span> <i class="bi bi-chevron-right"></i></a></li>
+        <li><a href="contact.html" class="active"><span>Contact</span> <i class="bi bi-chevron-right"></i></a></li>
+      </ul>
+    </div>
+    <div class="mobile-drawer-footer">
+      <div class="mobile-drawer-utilities">
+        <button type="button" class="header-util-btn rtl-toggle-btn" aria-label="Switch to Right-to-Left (RTL)" aria-pressed="false">
+          <i class="bi bi-arrow-left-right"></i> <span class="rtl-btn-text">RTL</span>
+        </button>
+        <button type="button" class="header-util-btn theme-toggle-btn" aria-label="Switch to dark theme" aria-pressed="false">
+          <i class="bi bi-moon-stars-fill"></i> <span class="theme-btn-text">Dark</span>
+        </button>
+      </div>
+      <a href="#booking-form-section" class="btn-brand-gold w-100">
+        <i class="bi bi-mic-fill"></i> Book an Emcee
+      </a>
+      <div class="mobile-contact-quick">
+        <span><i class="bi bi-telephone-fill"></i> +1 (800) 945-STAGE</span>
+        <span><i class="bi bi-envelope-fill"></i> bookings@anchoremcee.com</span>
       </div>
     </div>
+  </aside>
 
-    <section class="container">
-      <div class="split align-top" id="contact-split">
+  <main>
 
-        <!-- Store -->
-        <div class="split-body" data-reveal>
-          <h2 class="heading-centered">Showroom &amp; Studio</h2>
-          <div class="map-frame">
-            <iframe
-              title="Aura Favors flagship showroom location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d-74.119763973046!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1690000000000!5m2!1sen!2s"
-              width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+    <!-- ==================== 1. PREMIUM BOOKING HERO ==================== -->
+    <section class="page-hero text-center">
+      <div class="page-hero-bg">
+        <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1920&q=85"
+          alt="Event presenter holding microphone under warm stage lighting">
+      </div>
+      <div class="page-hero-overlay"></div>
+
+      <div class="container" data-reveal>
+        <ul class="breadcrumb-custom">
+          <li><a href="index.html">Home</a></li>
+          <li><i class="bi bi-chevron-right small text-white-50"></i></li>
+          <li class="active">Contact &amp; Booking</li>
+        </ul>
+        <div>
+          <span class="eyebrow"><i class="bi bi-calendar2-check-fill"></i> Priority Talent Reservation Desk</span>
+        </div>
+        <h1>Book Your <span style="color: var(--color-accent); font-style: italic;">Event Anchor &amp; Emcee</span></h1>
+        <p class="section-subtitle mx-auto">
+          Share your event date, venue, and audience profile below. Our senior talent producers will respond within
+          2 business hours with tailored host recommendations, showreels, and fee quotes.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== 2 & 3. CONTACT INFORMATION & BOOKING ENQUIRY FORM ==================== -->
+    <section class="section-padding section-ivory" id="booking-form-section">
+      <div class="container">
+        <div class="row g-4 g-xl-5">
+
+          <!-- Left Column: Contact Information -->
+          <div class="col-lg-5" data-reveal>
+            <div class="contact-info-card">
+              <span class="eyebrow mb-2"><i class="bi bi-headset"></i> Direct Talent Desk</span>
+              <h2 class="h3 text-white mb-3">Speak With a Senior <span style="color: var(--color-accent);">Talent
+                  Producer</span></h2>
+              <p class="small mb-4" style="color: rgba(250, 248, 243, 0.78);">
+                Need an immediate host availability check or last-minute production replacement? Contact our 24/7
+                booking concierge directly.
+              </p>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon"><i class="bi bi-telephone-fill"></i></div>
+                <div>
+                  <span class="small text-uppercase fw-bold"
+                    style="color: var(--color-accent); letter-spacing: 0.08em;">Booking Hotline</span>
+                  <h3 class="h6 text-white mb-1 mt-1"><a href="tel:+18009457824">+1 (800) 945-STAGE (7824)</a></h3>
+                  <p class="small mb-0" style="color: rgba(250, 248, 243, 0.7);">Mon–Sun: 24/7 Live Event Support</p>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon"><i class="bi bi-envelope-paper-fill"></i></div>
+                <div>
+                  <span class="small text-uppercase fw-bold"
+                    style="color: var(--color-accent); letter-spacing: 0.08em;">Email Enquiries</span>
+                  <h3 class="h6 text-white mb-1 mt-1"><a
+                      href="mailto:bookings@anchoremcee.com">bookings@anchoremcee.com</a></h3>
+                  <p class="small mb-0" style="color: rgba(250, 248, 243, 0.7);">corporate@anchoremcee.com (RFPs &amp;
+                    Agencies)</p>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                <div>
+                  <span class="small text-uppercase fw-bold"
+                    style="color: var(--color-accent); letter-spacing: 0.08em;">Agency Headquarters</span>
+                  <h3 class="h6 text-white mb-1 mt-1">Starlight Media Tower, Suite 1400</h3>
+                  <p class="small mb-0" style="color: rgba(250, 248, 243, 0.7);">580 Madison Avenue, New York, NY 10022
+                  </p>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon"><i class="bi bi-globe-americas"></i></div>
+                <div>
+                  <span class="small text-uppercase fw-bold"
+                    style="color: var(--color-accent); letter-spacing: 0.08em;">International Hubs</span>
+                  <h3 class="h6 text-white mb-1 mt-1">London &middot; Dubai &middot; Mumbai &middot; Singapore</h3>
+                  <p class="small mb-0" style="color: rgba(250, 248, 243, 0.7);">Local talent rosters available avoiding
+                    fly-in costs</p>
+                </div>
+              </div>
+
+              <div class="p-3 rounded-3 mt-4"
+                style="background: rgba(216, 180, 106, 0.12); border: 1px solid var(--border-gold);">
+                <div class="d-flex align-items-center gap-3">
+                  <i class="bi bi-lightning-charge-fill fs-3" style="color: var(--color-accent);"></i>
+                  <div>
+                    <strong class="text-white d-block small">2-Hour Shortlist Turnaround</strong>
+                    <span class="small" style="color: rgba(250, 248, 243, 0.78);">Complete with live showreels &amp;
+                      transparent quotes.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div class="grid" style="gap: var(--space-4); margin-top: var(--space-5);">
-            <div>
-              <h4>Address</h4>
-              <p style="color: var(--color-text-muted);">
-                720 Bridal Way &middot; Suite 400<br>
-                Design District<br>
-                New York, NY 10012
+          <!-- Right Column: Booking Enquiry Form -->
+          <div class="col-lg-7" data-reveal data-reveal-delay="120">
+            <div class="booking-form-card">
+              <div class="mb-4">
+                <span class="eyebrow mb-2"><i class="bi bi-file-earmark-check-fill"></i> Official Booking Enquiry</span>
+                <h2 class="h3 mb-2">Reserve Your Event Host</h2>
+                <p class="text-muted-custom small mb-0">
+                  Fields marked with an asterisk (<span class="required-star">*</span>) are required for an accurate
+                  availability and fee check.
+                </p>
+              </div>
+
+              <!-- Dynamic Success Feedback Banner -->
+              <div class="booking-success-banner" id="bookingSuccessBanner" role="status" aria-live="polite">
+                <div class="d-flex align-items-start gap-3">
+                  <div class="floating-badge-icon"><i class="bi bi-check2-circle"></i></div>
+                  <div>
+                    <h3 class="h5 text-white mb-1">Booking Enquiry Received!</h3>
+                    <p class="small mb-2" style="color: rgba(250, 248, 243, 0.86);">
+                      Thank you, <strong id="bookingConfirmName" style="color: var(--color-accent);">Valued
+                        Client</strong>.
+                      Our senior talent desk has logged your request for <strong id="bookingConfirmDetails"
+                        style="color: var(--color-accent);">your upcoming event</strong>.
+                    </p>
+                    <p class="small mb-0" style="color: rgba(250, 248, 243, 0.75);">
+                      You will receive a curated host lookbook and availability confirmation via email and phone within
+                      2 business hours.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <form id="bookingEnquiryForm" novalidate>
+                <div class="row g-3">
+                  <!-- 1. Full Name -->
+                  <div class="col-md-6 form-field-wrap">
+                    <label for="fullName" class="form-label-custom">Full Name <span
+                        class="required-star">*</span></label>
+                    <input type="text" id="fullName" name="fullName" class="form-control-custom"
+                      placeholder="e.g., Jonathan Mercer" required autocomplete="name">
+                    <div class="invalid-feedback-custom">Please enter your full name.</div>
+                  </div>
+
+                  <!-- 2. Email Address -->
+                  <div class="col-md-6 form-field-wrap">
+                    <label for="emailAddress" class="form-label-custom">Email Address <span
+                        class="required-star">*</span></label>
+                    <input type="email" id="emailAddress" name="emailAddress" class="form-control-custom"
+                      placeholder="e.g., jonathan@company.com" required autocomplete="email">
+                    <div class="invalid-feedback-custom">Please enter a valid email address.</div>
+                  </div>
+
+                  <!-- 3. Phone Number -->
+                  <div class="col-md-6 form-field-wrap">
+                    <label for="phoneNumber" class="form-label-custom">Phone Number <span
+                        class="required-star">*</span></label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" class="form-control-custom"
+                      placeholder="e.g., +1 (555) 234-5678" required autocomplete="tel">
+                    <div class="invalid-feedback-custom">Please enter a valid contact phone number.</div>
+                  </div>
+
+                  <!-- 4. Event Type -->
+                  <div class="col-md-6 form-field-wrap">
+                    <label for="eventType" class="form-label-custom">Event Type <span
+                        class="required-star">*</span></label>
+                    <select id="eventType" name="eventType" class="form-select-custom" required>
+                      <option value="" selected disabled>Select Event Category</option>
+                      <option value="Corporate Event / Conference">Corporate Event / Conference</option>
+                      <option value="Wedding / Sangeet / Reception">Wedding / Sangeet / Reception</option>
+                      <option value="Award Ceremony / Gala Night">Award Ceremony / Gala Night</option>
+                      <option value="Concert / Live Arena Show">Concert / Live Arena Show</option>
+                      <option value="College Cultural Festival">College Cultural Festival</option>
+                      <option value="Private Celebration / Milestone Party">Private Celebration / Milestone Party
+                      </option>
+                      <option value="Bilingual / Diplomatic Forum">Bilingual / Diplomatic Forum</option>
+                    </select>
+                    <div class="invalid-feedback-custom">Please select your event type.</div>
+                  </div>
+
+                  <!-- 5. Event Date -->
+                  <div class="col-md-6 form-field-wrap">
+                    <label for="eventDate" class="form-label-custom">Event Date <span
+                        class="required-star">*</span></label>
+                    <input type="date" id="eventDate" name="eventDate" class="form-control-custom" required>
+                    <div class="invalid-feedback-custom">Please select your scheduled event date.</div>
+                  </div>
+
+                  <!-- 6. Event Location -->
+                  <div class="col-md-6 form-field-wrap">
+                    <label for="eventLocation" class="form-label-custom">Event Location (Venue &amp; City) <span
+                        class="required-star">*</span></label>
+                    <input type="text" id="eventLocation" name="eventLocation" class="form-control-custom"
+                      placeholder="e.g., The Plaza Ballroom, New York" required>
+                    <div class="invalid-feedback-custom">Please enter the event city or venue.</div>
+                  </div>
+
+                  <!-- 7. Preferred Host Type -->
+                  <div class="col-md-4 form-field-wrap">
+                    <label for="preferredHostType" class="form-label-custom">Preferred Host Type <span
+                        class="required-star">*</span></label>
+                    <select id="preferredHostType" name="preferredHostType" class="form-select-custom" required>
+                      <option value="" selected disabled>Select Host Style</option>
+                      <option value="Corporate Keynote Host">Corporate Keynote Host</option>
+                      <option value="Luxury Wedding Emcee">Luxury Wedding Emcee</option>
+                      <option value="Bilingual / Multilingual Anchor">Bilingual / Multilingual Anchor</option>
+                      <option value="High-Energy Entertainment Host">High-Energy Entertainment Host</option>
+                      <option value="Celebrity Event Presenter">Celebrity Event Presenter</option>
+                      <option value="Male-Female Co-Hosting Duo">Male-Female Co-Hosting Duo</option>
+                    </select>
+                    <div class="invalid-feedback-custom">Please choose a preferred host type.</div>
+                  </div>
+
+                  <!-- 8. Expected Audience Size -->
+                  <div class="col-md-4 form-field-wrap">
+                    <label for="audienceSize" class="form-label-custom">Expected Audience Size <span
+                        class="required-star">*</span></label>
+                    <select id="audienceSize" name="audienceSize" class="form-select-custom" required>
+                      <option value="" selected disabled>Select Guest Count</option>
+                      <option value="50 - 150 Guests (Intimate)">50 – 150 Guests (Intimate)</option>
+                      <option value="150 - 500 Guests (Ballroom)">150 – 500 Guests (Ballroom)</option>
+                      <option value="500 - 1,500 Guests (Auditorium)">500 – 1,500 Guests (Auditorium)</option>
+                      <option value="1,500 - 5,000 Guests (Convention)">1,500 – 5,000 Guests (Convention)</option>
+                      <option value="5,000+ Guests (Arena / Festival)">5,000+ Guests (Arena / Festival)</option>
+                    </select>
+                    <div class="invalid-feedback-custom">Please estimate your audience size.</div>
+                  </div>
+
+                  <!-- 9. Estimated Budget -->
+                  <div class="col-md-4 form-field-wrap">
+                    <label for="estimatedBudget" class="form-label-custom">Estimated Budget <span
+                        class="required-star">*</span></label>
+                    <select id="estimatedBudget" name="estimatedBudget" class="form-select-custom" required>
+                      <option value="" selected disabled>Select Budget Range</option>
+                      <option value="$1,000 - $2,000">$1,000 – $2,000</option>
+                      <option value="$2,000 - $4,000">$2,000 – $4,000</option>
+                      <option value="$4,000 - $7,500">$4,000 – $7,500</option>
+                      <option value="$7,500 - $15,000">$7,500 – $15,000</option>
+                      <option value="$15,000+ (Celebrity / Multi-Day)">$15,000+ (Celebrity / Multi-Day)</option>
+                    </select>
+                    <div class="invalid-feedback-custom">Please select an estimated budget range.</div>
+                  </div>
+
+                  <!-- 10. Additional Requirements -->
+                  <div class="col-12 form-field-wrap">
+                    <label for="additionalRequirements" class="form-label-custom">Additional Requirements (Languages,
+                      Dress Code, Schedule, Specific Host)</label>
+                    <textarea id="additionalRequirements" name="additionalRequirements" rows="4"
+                      class="form-control-custom"
+                      placeholder="Share your event timings, required languages, specific host preference, or run-of-show highlights..."></textarea>
+                  </div>
+
+                  <!-- 11. Submit Booking Enquiry Button -->
+                  <div class="col-12 mt-4">
+                    <button type="submit" class="btn-brand-gold w-100 py-3">
+                      <i class="bi bi-send-check-fill"></i> Submit Booking Enquiry
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 4. EVENT BOOKING DETAILS ==================== -->
+    <section class="section-padding section-white" id="booking-details">
+      <div class="container">
+        <div class="text-center mb-5" data-reveal>
+          <span class="eyebrow"><i class="bi bi-clipboard2-check-fill"></i> Comprehensive Inclusion</span>
+          <h2 class="section-title">Standard Event <span class="text-purple">Booking Details</span></h2>
+          <p class="section-subtitle">
+            Every confirmed host reservation through Anchor &amp; Emcee Booking Service includes full production
+            support.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4" data-reveal>
+            <div class="step-card">
+              <div class="feature-icon-box"><i class="bi bi-file-earmark-music-fill"></i></div>
+              <h3>Pre-Show Script &amp; Cue Deck</h3>
+              <p class="text-muted-custom mb-0">
+                Includes two structured pre-production calls, custom opening and closing scripts, VIP pronunciation
+                verifications, and cue card preparation.
               </p>
             </div>
-            <div>
-              <h4>Direct Contact</h4>
-              <p style="color: var(--color-text-muted);">
-                Showroom: +1 800 555 0199<br>
-                Concierge: hello@aurafavors.com
+          </div>
+
+          <div class="col-md-6 col-lg-4" data-reveal data-reveal-delay="100">
+            <div class="step-card">
+              <div class="feature-icon-box"><i class="bi bi-soundwave"></i></div>
+              <h3>On-Site AV &amp; Stage Rehearsal</h3>
+              <p class="text-muted-custom mb-0">
+                Your host arrives 3 hours prior to guest doors opening for wireless microphone EQ testing, stage mark
+                walkthroughs, and show-caller comms sync.
               </p>
             </div>
-            <div>
-              <h4>Studio Hours</h4>
-              <p style="color: var(--color-text-muted);">
-                Monday – Friday: 9:00 AM – 6:00 PM<br>
-                Saturday: By Appointment (Scent Tasting)
+          </div>
+
+          <div class="col-md-6 col-lg-4" data-reveal data-reveal-delay="200">
+            <div class="step-card">
+              <div class="feature-icon-box"><i class="bi bi-shield-check"></i></div>
+              <h3>Contract &amp; Standby Protection</h3>
+              <p class="text-muted-custom mb-0">
+                Clear milestone invoicing (50% reservation retainer, 50% prior to event date) backed by our 100%
+                equivalent-tier standby host guarantee.
               </p>
             </div>
-            <div>
-              <h4>Transit &amp; Parking</h4>
-              <p style="color: var(--color-text-muted);">
-                Subway: N/R Prince St Station (2 min walk)<br>
-                Valet client parking available on-site.
-              </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 5. WHY BOOK THROUGH US ==================== -->
+    <section class="section-padding section-dark" id="why-book-through-us">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6" data-reveal>
+            <span class="eyebrow"><i class="bi bi-patch-check-fill"></i> The Agency Advantage</span>
+            <h2 class="section-title text-white">Why Book Through <span class="text-gold">Our Agency</span> vs. Direct
+              Freelancers?</h2>
+            <p class="mb-4">
+              Booking an independent freelancer carries single-point-of-failure risk. Booking through our agency gives
+              you an entire production support desk behind your microphone.
+            </p>
+
+            <div class="d-flex flex-column gap-3">
+              <div class="d-flex align-items-start gap-3">
+                <div class="floating-badge-icon"><i class="bi bi-check-lg"></i></div>
+                <div>
+                  <h3 class="h6 text-white mb-1">Zero Cancellation Risk</h3>
+                  <p class="small mb-0">If a host encounters an emergency, we deploy a briefed senior backup host within
+                    hours.</p>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-start gap-3">
+                <div class="floating-badge-icon"><i class="bi bi-check-lg"></i></div>
+                <div>
+                  <h3 class="h6 text-white mb-1">Pre-Auditioned Stage Quality</h3>
+                  <p class="small mb-0">Every host has been vetted across 50+ live stages—no exaggerated portfolios or
+                    amateur surprises.</p>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-start gap-3">
+                <div class="floating-badge-icon"><i class="bi bi-check-lg"></i></div>
+                <div>
+                  <h3 class="h6 text-white mb-1">Corporate-Ready Compliance &amp; Billing</h3>
+                  <p class="small mb-0">Unified vendor onboarding, tax-compliant invoicing, and NDA execution for
+                    enterprise procurement teams.</p>
+                </div>
+              </div>
             </div>
-            <div>
-              <h4>Virtual Consultation</h4>
-              <p style="color: var(--color-text-muted);">
-                Can't travel to NYC? Schedule a 1-on-1 virtual HD walkthrough of our wax seal colors and scent profiles.
-              </p>
+          </div>
+
+          <div class="col-lg-6" data-reveal data-reveal-delay="150">
+            <div class="rounded-4 overflow-hidden shadow-lg" style="border: 2px solid var(--color-accent);">
+              <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1000&q=85"
+                alt="Luxury gala award ceremony stage and audience" loading="lazy">
             </div>
-            <div>
-              <h4>Studio Social</h4>
-              <div class="footer-social" style="margin-top: var(--space-2);">
-                <a href="#" aria-label="Aura Favors on Instagram"><i class="ph ph-instagram-logo"></i></a>
-                <a href="#" aria-label="Aura Favors on Pinterest"><i class="ph ph-pinterest-logo"></i></a>
-                <a href="#" aria-label="Aura Favors on LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 6. FREQUENTLY ASKED QUESTIONS ==================== -->
+    <section class="section-padding section-ivory" id="booking-faq">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <div class="text-center mb-5" data-reveal>
+              <span class="eyebrow"><i class="bi bi-info-circle-fill"></i> Booking Clarity</span>
+              <h2 class="section-title">Booking &amp; Contract <span class="text-purple">FAQs</span></h2>
+            </div>
+
+            <div class="accordion accordion-custom" id="contactFaqAccordion" data-reveal>
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="cFaq1">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#cCollapse1"
+                    aria-expanded="true" aria-controls="cCollapse1">
+                    Can we arrange a video call with our shortlisted host before confirming?
+                  </button>
+                </h3>
+                <div id="cCollapse1" class="accordion-collapse collapse show" aria-labelledby="cFaq1"
+                  data-bs-parent="#contactFaqAccordion">
+                  <div class="accordion-body">
+                    Yes! Once you select 1–2 preferred hosts from the lookbook we send you, we arrange a complimentary
+                    15-minute chemistry video call so you can discuss your event vision directly with the host prior
+                    to signing.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="cFaq2">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#cCollapse2" aria-expanded="false" aria-controls="cCollapse2">
+                    What are the payment and reservation terms to lock in a date?
+                  </button>
+                </h3>
+                <div id="cCollapse2" class="accordion-collapse collapse" aria-labelledby="cFaq2"
+                  data-bs-parent="#contactFaqAccordion">
+                  <div class="accordion-body">
+                    A 50% booking retainer alongside a signed service agreement locks your host's calendar exclusively
+                    for your date. The remaining 50% balance is due 7 days prior to the event.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="cFaq3">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#cCollapse3" aria-expanded="false" aria-controls="cCollapse3">
+                    Are travel and accommodation included for out-of-town or destination events?
+                  </button>
+                </h3>
+                <div id="cCollapse3" class="accordion-collapse collapse" aria-labelledby="cFaq3"
+                  data-bs-parent="#contactFaqAccordion">
+                  <div class="accordion-body">
+                    We have local host rosters in 14 major metropolitan hubs (requiring zero flight or hotel costs).
+                    If you select a signature host flying in for a destination wedding or international conference, our
+                    proposal clearly itemizes travel and hotel requirements upfront.
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- Enquiry form -->
-        <div class="form-panel" data-reveal style="--reveal-delay:1">
-          <h2 class="heading-centered">Favor Quote &amp; Enquiry</h2>
-          <p class="subtext" style="text-align:left; margin:0 0 var(--space-5)">Our concierge team will get back to you within 12 hours.</p>
-
-          <form data-validate="true" action="#" method="POST" novalidate>
-
-            <div class="form-group">
-              <label for="name">Full Name / Couple Names *</label>
-              <input type="text" id="name" name="name" class="form-control" required>
-              <span class="error-msg">Name is required</span>
+    <!-- ==================== 7. FINAL CTA ==================== -->
+    <section class="section-padding section-white">
+      <div class="container">
+        <div class="cta-banner-box" data-reveal>
+          <div class="cta-banner-bg">
+            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1600&q=80"
+              alt="Live stage event and celebratory lighting" loading="lazy">
+          </div>
+          <div class="row align-items-center justify-content-between g-4">
+            <div class="col-lg-7">
+              <span class="eyebrow"><i class="bi bi-telephone-outbound-fill"></i> Immediate Assistance</span>
+              <h2 class="section-title text-white mb-3">
+                Prefer to Discuss Your Brief <span class="text-gold">Over the Phone?</span>
+              </h2>
+              <p class="mb-0" style="color: rgba(250, 248, 243, 0.85);">
+                Call our senior booking desk directly or browse our verified directory of 120+ professional event
+                anchors.
+              </p>
             </div>
-
-            <div class="form-group">
-              <label for="company">Wedding Planner / Event Name *</label>
-              <input type="text" id="company" name="company" class="form-control" required>
-              <span class="error-msg">Event or planner name is required</span>
+            <div class="col-lg-auto d-flex flex-wrap gap-3">
+              <a href="tel:+18009457824" class="btn-brand-gold">
+                <i class="bi bi-telephone-fill"></i> Call +1 (800) 945-STAGE
+              </a>
+              <a href="hosts.html" class="btn-brand-outline-gold">
+                Browse Host Roster
+              </a>
             </div>
-
-            <div class="form-group">
-              <label for="email">Email Address *</label>
-              <input type="email" id="email" name="email" class="form-control" required>
-              <span class="error-msg">Valid email is required</span>
-            </div>
-
-            <div class="form-group">
-              <label for="phone">Phone Number (Optional)</label>
-              <input type="tel" id="phone" name="phone" class="form-control">
-            </div>
-
-            <div class="form-group">
-              <label for="enquiry_type">Enquiry Type *</label>
-              <select id="enquiry_type" name="enquiry_type" class="form-control" required style="cursor: pointer;">
-                <option value="" disabled selected>Select an option</option>
-                <option value="candle">Candle Favors Quote</option>
-                <option value="bath">Botanical Bath Salts Quote</option>
-                <option value="samples">Sample Pack Request</option>
-                <option value="branding">Custom Monogram &amp; Wax Seals</option>
-                <option value="bulk">Bulk / Wholesale Order</option>
-              </select>
-              <span class="error-msg">Please select an enquiry type</span>
-            </div>
-
-            <div class="form-group">
-              <label for="quantity">Estimated Guest / Unit Count *</label>
-              <select id="quantity" name="quantity" class="form-control" required style="cursor: pointer;">
-                <option value="" disabled selected>Select guest count</option>
-                <option value="small">25 - 75 units</option>
-                <option value="medium">75 - 150 units</option>
-                <option value="large">150+ units</option>
-              </select>
-              <span class="error-msg">Please select an estimated quantity</span>
-            </div>
-
-            <div class="form-group">
-              <label for="message">Wedding Date &amp; Notes *</label>
-              <textarea id="message" name="message" class="form-control" rows="4" required placeholder="Tell us your wedding date, color scheme, and fragrance preferences..."></textarea>
-              <span class="error-msg">Message is required</span>
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-full">Submit Enquiry <i class="ph ph-arrow-right"></i></button>
-          </form>
+          </div>
         </div>
-
       </div>
     </section>
 
   </main>
 
-  <footer class="footer">
+  <!-- ==================== 8. PROFESSIONAL FOOTER ==================== -->
+  <footer class="site-footer">
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <a href="index.html" class="logo"><img src="assets/images/aura-logo.svg" alt="Aura Favors"></a>
-          <p class="footer-about">Premier wedding favor &amp; custom gift studio. Crafting hand-poured candles, organic bath teas, and custom monogrammed keepsakes for fine celebrations.</p>
-          <div class="footer-social">
-            <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
-            <a href="#" aria-label="Pinterest"><i class="ph ph-pinterest-logo"></i></a>
-            <a href="#" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
-            <a href="#" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+      <div class="row g-4 justify-content-between">
+        <div class="col-lg-4">
+          <a href="index.html" class="brand-logo mb-3">
+            <img src="assets/images/logo.svg" alt="Anchor &amp; Emcee Booking Service" width="240" height="48">
+          </a>
+          <p class="mt-2 mb-3" style="color: rgba(250, 248, 243, 0.75); font-size: 0.93rem;">
+            The premier talent booking agency for corporate event anchors, luxury wedding emcees, award ceremony
+            presenters, bilingual moderators, and live concert hosts.
+          </p>
+          <div class="social-links" aria-label="Social Media Links">
+            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i
+                class="bi bi-instagram"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i
+                class="bi bi-youtube"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i
+                class="bi bi-linkedin"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="X Twitter"><i
+                class="bi bi-twitter-x"></i></a>
           </div>
         </div>
-        <div class="footer-col">
-          <h4>Favor Catalog</h4>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <h3 class="footer-heading">Quick Links</h3>
           <ul class="footer-links">
-            <li><a href="shop.html">Candle Favors</a></li>
-            <li><a href="shop.html">Botanical Bath Salts</a></li>
-            <li><a href="shop.html">Edible Treats &amp; Honey</a></li>
-            <li><a href="shop.html">Custom Wax Sealed Boxes</a></li>
-            <li><a href="shop.html#new">New Arrivals</a></li>
+            <li><a href="index.html"><i class="bi bi-chevron-right"></i> Home</a></li>
+            <li><a href="hosts.html"><i class="bi bi-chevron-right"></i> Our Hosts</a></li>
+            <li><a href="gallery.html"><i class="bi bi-chevron-right"></i> Event Gallery</a></li>
+            <li><a href="about.html"><i class="bi bi-chevron-right"></i> About Agency</a></li>
+            <li><a href="services.html"><i class="bi bi-chevron-right"></i> Services</a></li>
+            <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Book an Emcee</a></li>
           </ul>
         </div>
-        <div class="footer-col">
-          <h4>Concierge Services</h4>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <h3 class="footer-heading">Hosting Services</h3>
           <ul class="footer-links">
-            <li><a href="branding.html">Custom Monograms</a></li>
-            <li><a href="bulk.html">Bulk &amp; Wholesale Orders</a></li>
-            <li><a href="enquire.html">Sample Kit Request</a></li>
-            <li><a href="contact.html">Studio Booking</a></li>
-            <li><a href="enquire.html">Custom Quote</a></li>
+            <li><a href="services.html#corporate"><i class="bi bi-chevron-right"></i> Corporate Event Hosting</a></li>
+            <li><a href="services.html#weddings"><i class="bi bi-chevron-right"></i> Wedding Emcee Services</a></li>
+            <li><a href="services.html#awards"><i class="bi bi-chevron-right"></i> Award Ceremony Hosting</a></li>
+            <li><a href="services.html#concerts"><i class="bi bi-chevron-right"></i> Concert &amp; Live Show
+                Anchoring</a></li>
+            <li><a href="services.html#college"><i class="bi bi-chevron-right"></i> College Festival Hosting</a></li>
+            <li><a href="services.html#bilingual"><i class="bi bi-chevron-right"></i> Bilingual &amp; Global Anchors</a>
+            </li>
           </ul>
         </div>
-        <div class="footer-col">
-          <h4>The Studio</h4>
+
+        <div class="col-md-4 col-lg-3">
+          <h3 class="footer-heading">Booking Desk</h3>
           <ul class="footer-links">
-            <li><a href="about.html">Our Story</a></li>
-            <li><a href="blog.html">Gifting Journal</a></li>
-            <li><a href="home2.html">Bespoke Lookbook</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="enquire.html">Enquiry Concierge</a></li>
+            <li>
+              <a href="tel:+18009457824">
+                <i class="bi bi-telephone-fill" style="color: var(--color-accent);"></i> +1 (800) 945-STAGE
+              </a>
+            </li>
+            <li>
+              <a href="mailto:bookings@anchoremcee.com">
+                <i class="bi bi-envelope-fill" style="color: var(--color-accent);"></i> bookings@anchoremcee.com
+              </a>
+            </li>
+            <li class="d-flex align-items-start gap-2" style="color: rgba(250, 248, 243, 0.75); font-size: 0.9rem;">
+              <i class="bi bi-geo-alt-fill mt-1" style="color: var(--color-accent);"></i>
+              <span>Suite 1400, Starlight Media Tower, 580 Madison Ave, New York, NY</span>
+            </li>
+            <li class="d-flex align-items-center gap-2" style="color: var(--color-accent); font-size: 0.86rem;">
+              <i class="bi bi-clock-fill"></i>
+              <span>24/7 Live Event Support Desk</span>
+            </li>
           </ul>
         </div>
       </div>
+
       <div class="footer-bottom">
-        <span>&copy; 2026 Aura Favors — Wedding &amp; Custom Gift Studio</span>
-        <nav>
-          <a href="#">Privacy</a>
-          <a href="#">Terms</a>
-          <a href="#">Accessibility</a>
-        </nav>
+        <span>&copy; 2026 Anchor &amp; Emcee Booking Service. All rights reserved.</span>
+        <div class="d-flex gap-3">
+          <a href="about.html">Editorial Standards</a>
+          <a href="services.html">Booking Terms</a>
+          <a href="contact.html">Support</a>
+        </div>
       </div>
     </div>
   </footer>
 
-  <div class="modal-overlay">
-    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-      <button class="modal-close" aria-label="Close modal"><i class="ph ph-x"></i></button>
-      <div class="modal-body"></div>
-    </div>
-  </div>
+  <!-- Back to Top -->
+  <button class="back-to-top-btn" type="button" aria-label="Scroll back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
 
-  <div class="toast" role="status" aria-live="polite"><i class="ph ph-check-circle"></i><span></span></div>
-  <button class="back-to-top" type="button" aria-label="Back to top"><i class="ph ph-arrow-up"></i></button>
-
+  <!-- Bootstrap JS & Custom Script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/cart.js"></script>
-  <script src="assets/js/shop.js"></script>
 </body>
+
 </html>

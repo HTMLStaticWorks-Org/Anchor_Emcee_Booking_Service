@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Hosting &amp; Emcee Services | Anchor &amp; Emcee Booking Service</title>
+  <meta name="description"
+    content="Explore our complete event hosting services: Corporate Event Hosting, Wedding Emcee Services, Award Ceremony Hosting, Concert Anchoring, College Festivals, Private Parties, and Bilingual Anchoring.">
+  <meta name="theme-color" content="#101827">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+
+  <!-- Bootstrap 5.3 CSS & Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- ==================== STICKY HEADER ==================== -->
+  <header class="site-header" id="topHeader">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand-logo" aria-label="Anchor &amp; Emcee Booking Service Home">
+          <img src="assets/images/logo.svg" alt="Anchor &amp; Emcee Booking Service Logo" width="250" height="50">
+        </a>
+
+        <nav aria-label="Primary Navigation">
+          <ul class="desktop-nav">
+            <li><a href="index.html" class="nav-link-item">Home</a></li>
+            <li><a href="home2.html" class="nav-link-item">Home 2</a></li>
+            <li><a href="hosts.html" class="nav-link-item">Hosts</a></li>
+            <li><a href="gallery.html" class="nav-link-item">Gallery</a></li>
+            <li><a href="about.html" class="nav-link-item">About</a></li>
+            <li><a href="services.html" class="nav-link-item active" aria-current="page">Services</a></li>
+            <li><a href="contact.html" class="nav-link-item">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <button type="button" class="header-util-btn rtl-toggle-btn" aria-label="Switch to Right-to-Left (RTL)" aria-pressed="false" title="Toggle RTL/LTR">
+            <i class="bi bi-arrow-left-right"></i> <span class="rtl-btn-text">RTL</span>
+          </button>
+          <button type="button" class="header-util-btn theme-toggle-btn" aria-label="Switch to dark theme" aria-pressed="false" title="Toggle Dark/Light Theme">
+            <i class="bi bi-moon-stars-fill"></i>
+          </button>
+          <a href="contact.html" class="btn-brand-gold btn-sm-custom header-cta-desktop">
+            <i class="bi bi-mic-fill"></i> Book an Emcee
+          </a>
+          <button class="mobile-menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false"
+            aria-controls="mobileNavDrawer">
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== MOBILE NAVIGATION DRAWER ==================== -->
+  <div class="mobile-nav-overlay" aria-hidden="true"></div>
+  <aside class="mobile-nav-drawer" id="mobileNavDrawer" aria-label="Mobile Navigation" aria-hidden="true">
+    <div>
+      <div class="mobile-drawer-header">
+        <a href="index.html" class="brand-logo">
+          <img src="assets/images/logo.svg" alt="Anchor &amp; Emcee Booking Service" width="210" height="42">
+        </a>
+        <button class="mobile-drawer-close" type="button" aria-label="Close navigation menu">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li><a href="index.html"><span>Home</span> <i class="bi bi-chevron-right"></i></a></li>
+        <li><a href="home2.html"><span>Home 2</span> <i class="bi bi-chevron-right"></i></a></li>
+        <li><a href="hosts.html"><span>Hosts</span> <i class="bi bi-chevron-right"></i></a></li>
+        <li><a href="gallery.html"><span>Gallery</span> <i class="bi bi-chevron-right"></i></a></li>
+        <li><a href="about.html"><span>About</span> <i class="bi bi-chevron-right"></i></a></li>
+        <li><a href="services.html" class="active"><span>Services</span> <i class="bi bi-chevron-right"></i></a></li>
+        <li><a href="contact.html"><span>Contact</span> <i class="bi bi-chevron-right"></i></a></li>
+      </ul>
+    </div>
+    <div class="mobile-drawer-footer">
+      <div class="mobile-drawer-utilities">
+        <button type="button" class="header-util-btn rtl-toggle-btn" aria-label="Switch to Right-to-Left (RTL)" aria-pressed="false">
+          <i class="bi bi-arrow-left-right"></i> <span class="rtl-btn-text">RTL</span>
+        </button>
+        <button type="button" class="header-util-btn theme-toggle-btn" aria-label="Switch to dark theme" aria-pressed="false">
+          <i class="bi bi-moon-stars-fill"></i> <span class="theme-btn-text">Dark</span>
+        </button>
+      </div>
+      <a href="contact.html" class="btn-brand-gold w-100">
+        <i class="bi bi-mic-fill"></i> Book an Emcee
+      </a>
+      <div class="mobile-contact-quick">
+        <span><i class="bi bi-telephone-fill"></i> +1 (800) 945-STAGE</span>
+        <span><i class="bi bi-envelope-fill"></i> bookings@anchoremcee.com</span>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+
+    <!-- ==================== 1. PREMIUM SERVICES HERO ==================== -->
+    <section class="page-hero text-center">
+      <div class="page-hero-bg">
+        <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=1920&q=85"
+          alt="Professional presenter commanding a high-production stage">
+      </div>
+      <div class="page-hero-overlay"></div>
+
+      <div class="container" data-reveal>
+        <ul class="breadcrumb-custom">
+          <li><a href="index.html">Home</a></li>
+          <li><i class="bi bi-chevron-right small text-white-50"></i></li>
+          <li class="active">Our Services</li>
+        </ul>
+        <div>
+          <span class="eyebrow"><i class="bi bi-stars"></i> End-to-End Stage Anchoring</span>
+        </div>
+        <h1>Bespoke <span style="color: var(--color-accent); font-style: italic;">Event Hosting Services</span></h1>
+        <p class="section-subtitle mx-auto">
+          From C-suite leadership summits and black-tie award galas to royal destination weddings and stadium concerts,
+          discover specialized hosting solutions tailored to your stage.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== 2 - 8. SEVEN SPECIALIZED HOSTING SERVICES ==================== -->
+    <section class="section-padding section-ivory" id="services-catalog">
+      <div class="container">
+        <div class="text-center mb-5" data-reveal>
+          <span class="eyebrow"><i class="bi bi-mic-fill"></i> Seven Core Hosting Specializations</span>
+          <h2 class="section-title">Complete Live Stage &amp; <span class="text-purple">Emcee Solutions</span></h2>
+          <p class="section-subtitle">
+            Every booking includes pre-event script consultation, wardrobe coordination, technical soundcheck, and
+            on-stage performance mastery.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Service 1: Corporate Event Hosting -->
+          <div class="col-md-6 col-lg-4" id="corporate" data-reveal>
+            <article class="service-showcase-card">
+              <div class="service-showcase-media">
+                <span class="host-specialty-badge">01 &middot; Corporate</span>
+                <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=900&q=80"
+                  alt="Corporate Event Hosting at an executive conference stage" loading="lazy">
+              </div>
+              <div class="service-showcase-body">
+                <h3>Corporate Event Hosting</h3>
+                <p class="text-muted-custom">
+                  Authoritative and articulate presenters for annual leadership summits, flagship product launches,
+                  investor days, and C-suite panel moderation.
+                </p>
+                <ul class="service-benefit-list">
+                  <li><i class="bi bi-check-circle-fill"></i><span>Executive keynote introductions &amp; transitions</span></li>
+                  <li><i class="bi bi-check-circle-fill"></i><span>Moderated fireside chats &amp; live audience Q&amp;A</span></li>
+                  <li><i class="bi bi-check-circle-fill"></i><span>Teleprompter &amp; multi-track timing precision</span></li>
+                </ul>
+                <a href="contact.html?service=Corporate%20Event" class="btn-brand-gold mt-auto w-100">
+                  Book Corporate Host <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Service 2: Wedding Emcee Services -->
+          <div class="col-md-6 col-lg-4" id="weddings" data-reveal data-reveal-delay="100">
+            <article class="service-showcase-card">
+              <div class="service-showcase-media">
+                <span class="host-specialty-badge">02 &middot; Weddings</span>
+                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80"
+                  alt="Luxury Wedding Emcee hosting a grand celebration reception" loading="lazy">
+              </div>
+              <div class="service-showcase-body">
+                <h3>Wedding Emcee Services</h3>
+                <p class="text-muted-custom">
+                  Warm, charismatic hosts who transform sangeet evenings, ring ceremonies, cocktail hours, and grand
+                  receptions into joyful family memories.
+                </p>
+                <ul class="service-benefit-list">
+                  <li><i class="bi bi-check-circle-fill"></i><span>Bespoke couple story scripts &amp; grand entries</span></li>
+                  <li><i class="bi bi-check-circle-fill"></i><span>Interactive multi-generational family games</span></li>
+                  <li><i class="bi bi-check-circle-fill"></i><span>Seamless sync with wedding planners &amp; DJs</span></li>
+                </ul>
+                <a href="contact.html?service=Wedding" class="btn-brand-gold mt-auto w-100">
+                  Book Wedding Emcee <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Service 3: Award Ceremony Hosting -->
+          <div class="col-md-6 col-lg-4" id="awards" data-reveal data-reveal-delay="200">
+            <article class="service-showcase-card">
+              <div class="service-showcase-media">
+                <span class="host-specialty-badge">03 &middot; Award Galas</span>
+                <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=900&q=80"
+                  alt="Award Ceremony Hosting at a glamorous black-tie gala night" loading="lazy">
+              </div>
+              <div class="service-showcase-body">
+                <h3>Award Ceremony Hosting</h3>
+                <p class="text-muted-custom">
+                  Red-carpet glamour and broadcast composure for industry awards, charity auctions, film premieres, and
+                  national excellence galas.
+                </p>
+                <ul class="service-benefit-list">
+                  <li><i class="bi bi-check-circle-fill"></i><span>Flawless nominee &amp; dignitary pronunciation</span></li>
+                  <li><i class="bi bi-check-circle-fill"></i><span>Witty, respectful banter that keeps award pace brisk</span></li>
+                  <li><i class="bi bi-check-circle-fill"></i><span>Live broadcast &amp; voice-of-god (VOG) capability</span></li>
+                </ul>
+                <a href="contact.html?service=Award%20Ceremony" class="btn-brand-gold mt-auto w-100">
+                  Book Gala Presenter <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Service 4: Concert & Live Show Anchoring -->
+          <div class="col-md-6 col-lg-4" id="concerts" data-reveal>
+            <article class="service-showcase-card">
+              <div class="service-showcase-media">
+                <span class="host-specialty-badge">04 &middot; Concerts</span>
+                <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=900&q=80"
+                  alt="Concert and Live Show Anchoring before an arena crowd" loading="lazy">
+              </div>
+              <div class="service-showcase-body">
+                <h3>Concert &amp; Live Show Anchoring</h3>
+                <p class="text-muted-custom">
+                  High-voltage crowd catalysts for stadium tours, outdoor music festivals, sports arenas, and
+                  experiential sponsor stages.
+                </p>
+                <ul class="service-benefit-list">
+                  <li><i class="bi bi-check-circle-fill"></i><span>Arena-scale crowd warm-ups &amp; artist intros</span></li>
+                  <li><i class="bi bi-check-circle-fill"></i><span>Engaging stage-changeover entertainment</span></li>
+                  <li><i class="bi bi-check-circle-fill"></i><span>Live sponsor shoutouts &amp; T-shirt cannon hype</span></li>
+                </ul>
+                <a href="contact.html?service=Concert" class="btn-brand-gold mt-auto w-100">
+                  Book Concert Anchor <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Service 5: College Festival Hosting -->
+          <div class="col-md-6 col-lg-4" id="college" data-reveal data-reveal-delay="100">
+            <article class="service-showcase-card">
+              <div class="service-showcase-media">
+                <span class="host-specialty-badge">05 &middot; Campus Fests</span>
+                <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=900&q=80"
+                  alt="College Festival Hosting at a packed student cultural festival" loading="lazy">
+              </div>
+              <div class="service-showcase-body">
+                <h3>College Festival Hosting</h3>
+                <p class="text-muted-custom">
+                  Dynamic, youth-savvy hosts for university cultural festivals, battle of the bands, fashion runways,
+                  and inter-collegiate finales.
+                </p>
+                <ul class="service-benefit-list">
+                  <li><i class="bi bi-check-circle-fill"></i><span>Spontaneous student crowd games &amp; challenges</span></li>
+                  <li><i class="bi bi-check-circle-fill"></i><span>High-energy DJ night &amp; pro-show hosting</span></li>
+                  <li><i class="bi bi-check-circle-fill"></i><span>Social-media friendly live stage reels</span></li>
+                </ul>
+                <a href="contact.html?service=College%20Festival" class="btn-brand-gold mt-auto w-100">
+                  Book Campus Host <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Service 6: Private Party Emcees -->
+          <div class="col-md-6 col-lg-4" id="private" data-reveal data-reveal-delay="200">
+            <article class="service-showcase-card">
+              <div class="service-showcase-media">
+                <span class="host-specialty-badge">06 &middot; Private Parties</span>
+                <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=900&q=80"
+                  alt="Private Party Emcee hosting an exclusive milestone anniversary gala" loading="lazy">
+              </div>
+              <div class="service-showcase-body">
+                <h3>Private Party Emcees</h3>
+                <p class="text-muted-custom">
+                  Sophisticated, personable hosts for 50th anniversaries, milestone birthdays, luxury yacht soirées,
+                  and VIP festive galas.
+                </p>
+                <ul class="service-benefit-list">
+                  <li><i class="bi bi-check-circle-fill"></i><span>Custom trivia &amp; roast-style family tributes</span></li>
+                  <li><i class="bi bi-check-circle-fill"></i><span>Curated icebreakers &amp; dancefloor transitions</span></li>
+                  <li><i class="bi bi-check-circle-fill"></i><span>Discreet, white-glove VIP guest handling</span></li>
+                </ul>
+                <a href="contact.html?service=Private%20Party" class="btn-brand-gold mt-auto w-100">
+                  Book Private Emcee <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Service 7: Bilingual & Multilingual Anchoring (Full-Width Highlight Card) -->
+          <div class="col-12" id="bilingual" data-reveal>
+            <article class="service-showcase-card">
+              <div class="row g-0 align-items-center">
+                <div class="col-lg-5">
+                  <div class="service-showcase-media h-100" style="min-height: 320px;">
+                    <span class="host-specialty-badge">07 &middot; Global &amp; Multilingual</span>
+                    <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=1000&q=85"
+                      alt="Bilingual and Multilingual Anchor hosting an international diplomatic summit" loading="lazy">
+                  </div>
+                </div>
+                <div class="col-lg-7">
+                  <div class="service-showcase-body p-4 p-lg-5">
+                    <span class="eyebrow mb-2"><i class="bi bi-translate"></i> 18 Global Languages Available</span>
+                    <h3 class="h2 mb-3">Bilingual &amp; Multilingual Anchoring</h3>
+                    <p class="text-muted-custom mb-4">
+                      Hosting an international delegation, cross-cultural destination wedding, or global trade expo? Our
+                      bilingual and trilingual anchors switch effortlessly between English, French, Spanish, Arabic,
+                      Hindi, Mandarin, Italian, and German in real time—ensuring every dignitary and family member
+                      feels directly addressed.
+                    </p>
+                    <div class="row g-3 mb-4">
+                      <div class="col-sm-6">
+                        <div class="d-flex align-items-center gap-2">
+                          <i class="bi bi-check-circle-fill" style="color: var(--color-secondary);"></i>
+                          <span class="small fw-semibold">Real-time on-stage dual-language summaries</span>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="d-flex align-items-center gap-2">
+                          <i class="bi bi-check-circle-fill" style="color: var(--color-secondary);"></i>
+                          <span class="small fw-semibold">Cultural etiquette &amp; diplomatic protocol mastery</span>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="d-flex align-items-center gap-2">
+                          <i class="bi bi-check-circle-fill" style="color: var(--color-secondary);"></i>
+                          <span class="small fw-semibold">Co-hosting male &amp; female bilingual pairs available</span>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="d-flex align-items-center gap-2">
+                          <i class="bi bi-check-circle-fill" style="color: var(--color-secondary);"></i>
+                          <span class="small fw-semibold">Dual-script translation &amp; cue card preparation</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <a href="contact.html?service=Bilingual%20Anchoring" class="btn-brand-purple">
+                        <i class="bi bi-globe2"></i> Request Bilingual Host Roster
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 9. CUSTOMIZED EVENT HOSTING PACKAGES ==================== -->
+    <section class="section-padding section-white" id="packages">
+      <div class="container">
+        <div class="text-center mb-5" data-reveal>
+          <span class="eyebrow"><i class="bi bi-gem"></i> Transparent Engagement Tiers</span>
+          <h2 class="section-title">Customized Event <span class="text-purple">Hosting Packages</span></h2>
+          <p class="section-subtitle">
+            Flexible booking structures tailored for half-day sessions, full-day galas, or multi-day destination events.
+          </p>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+          <!-- Tier 1 -->
+          <div class="col-lg-4" data-reveal>
+            <div class="package-card">
+              <span class="eyebrow mb-2">Spotlight Session</span>
+              <h3>Single-Session Stage Package</h3>
+              <p class="text-muted-custom small mb-3">
+                Ideal for evening cocktail receptions, product reveals, press conferences, or 4-hour private soirées.
+              </p>
+              <div class="package-price font-heading fs-2 fw-bold mb-1" style="color: var(--color-primary);">
+                From $1,250 <span class="fs-6 fw-normal text-muted-custom">/ event</span>
+              </div>
+              <hr class="my-3">
+              <ul class="service-benefit-list mb-4">
+                <li><i class="bi bi-check-circle-fill"></i><span>Up to 4 hours of live on-stage hosting</span></li>
+                <li><i class="bi bi-check-circle-fill"></i><span>1 pre-event virtual script &amp; flow briefing</span></li>
+                <li><i class="bi bi-check-circle-fill"></i><span>Early arrival for AV &amp; mic soundcheck</span></li>
+                <li><i class="bi bi-check-circle-fill"></i><span>Custom wardrobe alignment to event theme</span></li>
+                <li><i class="bi bi-check-circle-fill"></i><span>Agency standby backup guarantee</span></li>
+              </ul>
+              <a href="contact.html?package=Spotlight%20Session" class="btn-brand-outline-dark mt-auto w-100">
+                Request Spotlight Quote
+              </a>
+            </div>
+          </div>
+
+          <!-- Tier 2 (Featured) -->
+          <div class="col-lg-4" data-reveal data-reveal-delay="120">
+            <div class="package-card featured">
+              <span class="package-ribbon">Most Popular</span>
+              <span class="eyebrow mb-2">Command Performance</span>
+              <h3>Full-Day Flagship Production</h3>
+              <p class="small mb-3">
+                Designed for full-day corporate conferences, black-tie award galas, sangeet nights, and grand wedding
+                receptions.
+              </p>
+              <div class="package-price font-heading fs-2 fw-bold mb-1">
+                From $2,400 <span class="fs-6 fw-normal" style="color: var(--color-accent);">/ full day</span>
+              </div>
+              <hr class="my-3 border-secondary">
+              <ul class="service-benefit-list mb-4">
+                <li><i class="bi bi-check-circle-fill" style="color: var(--color-accent);"></i><span>Up to 8 hours of full-stage hosting &amp; moderation</span></li>
+                <li><i class="bi bi-check-circle-fill" style="color: var(--color-accent);"></i><span>Bespoke scriptwriting &amp; segment design</span></li>
+                <li><i class="bi bi-check-circle-fill" style="color: var(--color-accent);"></i><span>2 wardrobe changes (Day Keynote + Evening Gala)</span></li>
+                <li><i class="bi bi-check-circle-fill" style="color: var(--color-accent);"></i><span>On-site technical rehearsal with show director</span></li>
+                <li><i class="bi bi-check-circle-fill" style="color: var(--color-accent);"></i><span>Interactive crowd Q&amp;A or family game segments</span></li>
+              </ul>
+              <a href="contact.html?package=Command%20Performance" class="btn-brand-gold mt-auto w-100">
+                Book Flagship Package
+              </a>
+            </div>
+          </div>
+
+          <!-- Tier 3 -->
+          <div class="col-lg-4" data-reveal data-reveal-delay="240">
+            <div class="package-card">
+              <span class="eyebrow mb-2">Royal &amp; Global</span>
+              <h3>Multi-Day Destination &amp; Summit</h3>
+              <p class="text-muted-custom small mb-3">
+                Comprehensive coverage for 2–4 day destination weddings, international expos, or co-hosted dual-anchor
+                stages.
+              </p>
+              <div class="package-price font-heading fs-2 fw-bold mb-1" style="color: var(--color-primary);">
+                Custom Quote <span class="fs-6 fw-normal text-muted-custom">/ multi-day</span>
+              </div>
+              <hr class="my-3">
+              <ul class="service-benefit-list mb-4">
+                <li><i class="bi bi-check-circle-fill"></i><span>Multi-day dedicated single or dual co-hosts</span></li>
+                <li><i class="bi bi-check-circle-fill"></i><span>Bilingual / multilingual presentation included</span></li>
+                <li><i class="bi bi-check-circle-fill"></i><span>Dedicated agency producer assigned to your show</span></li>
+                <li><i class="bi bi-check-circle-fill"></i><span>Full rehearsal day + all ceremonial functions</span></li>
+                <li><i class="bi bi-check-circle-fill"></i><span>Travel &amp; international hospitality coordination</span></li>
+              </ul>
+              <a href="contact.html?package=Multi-Day%20Destination" class="btn-brand-outline-dark mt-auto w-100">
+                Request Custom Proposal
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 10. HOW OUR BOOKING PROCESS WORKS ==================== -->
+    <section class="section-padding section-dark" id="how-it-works">
+      <div class="container">
+        <div class="text-center mb-5" data-reveal>
+          <span class="eyebrow"><i class="bi bi-lightning-fill"></i> Seamless Production Workflow</span>
+          <h2 class="section-title text-white">How Our <span class="text-gold">Booking Process Works</span></h2>
+          <p class="section-subtitle">
+            From your initial enquiry to the final curtain call, we manage every detail with military precision.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3" data-reveal>
+            <div class="feature-card-luxury">
+              <div class="feature-icon-box"><i class="bi bi-1-circle-fill"></i></div>
+              <h3 class="text-white">Event Brief &amp; Discovery</h3>
+              <p>Submit your event date, city, audience size, and format. Our desk reviews availability within 2 hours.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3" data-reveal data-reveal-delay="100">
+            <div class="feature-card-luxury">
+              <div class="feature-icon-box"><i class="bi bi-2-circle-fill"></i></div>
+              <h3 class="text-white">Curated Host Lookbook</h3>
+              <p>Receive a customized deck of matching anchors with unedited live showreels and all-inclusive fee quotes.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3" data-reveal data-reveal-delay="200">
+            <div class="feature-card-luxury">
+              <div class="feature-icon-box"><i class="bi bi-3-circle-fill"></i></div>
+              <h3 class="text-white">Chemistry Call &amp; Contract</h3>
+              <p>Meet your shortlisted emcee on a video call to align on tone, then lock in the date with a transparent contract.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3" data-reveal data-reveal-delay="300">
+            <div class="feature-card-luxury">
+              <div class="feature-icon-box"><i class="bi bi-4-circle-fill"></i></div>
+              <h3 class="text-white">Script Prep &amp; Showtime</h3>
+              <p>We co-develop the run-of-show script, finalize wardrobe styling, and execute a flawless live stage performance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 11. FAQ SECTION ==================== -->
+    <section class="section-padding section-ivory" id="services-faq">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <div class="text-center mb-5" data-reveal>
+              <span class="eyebrow"><i class="bi bi-question-circle-fill"></i> Common Questions</span>
+              <h2 class="section-title">Frequently Asked <span class="text-purple">Questions</span></h2>
+              <p class="section-subtitle">
+                Everything you need to know about hiring a professional event anchor or emcee through our agency.
+              </p>
+            </div>
+
+            <div class="accordion accordion-custom" id="servicesFaqAccordion" data-reveal>
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faqHead1">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
+                    How far in advance should we book an event anchor or wedding emcee?
+                  </button>
+                </h3>
+                <div id="faqCollapse1" class="accordion-collapse collapse show" aria-labelledby="faqHead1"
+                  data-bs-parent="#servicesFaqAccordion">
+                  <div class="accordion-body">
+                    For peak corporate conference seasons (September–December and February–May) and prime wedding dates,
+                    we recommend booking 4 to 8 weeks in advance to secure your first-choice host. However, with a
+                    roster of 120+ vetted presenters, our express desk also fulfills urgent bookings within 48 hours.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faqHead2">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                    Do your hosts write their own scripts or work with our show run-sheet?
+                  </button>
+                </h3>
+                <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHead2"
+                  data-bs-parent="#servicesFaqAccordion">
+                  <div class="accordion-body">
+                    Both! You can provide an existing cue sheet or let our host and agency scriptwriters craft bespoke
+                    speaker introductions, couple stories, transitions, and interactive audience segments tailored to
+                    your event objectives.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faqHead3">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                    What happens if our booked emcee falls ill or faces a travel emergency?
+                  </button>
+                </h3>
+                <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHead3"
+                  data-bs-parent="#servicesFaqAccordion">
+                  <div class="accordion-body">
+                    Every booking is protected by our Agency Standby Guarantee. Because we maintain all event scripts
+                    and cue sheets centrally, we can immediately deploy an equally experienced, fully briefed senior
+                    host from our roster at zero extra charge.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faqHead4">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+                    Can we book a male-female co-hosting duo or bilingual anchor pair?
+                  </button>
+                </h3>
+                <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHead4"
+                  data-bs-parent="#servicesFaqAccordion">
+                  <div class="accordion-body">
+                    Absolutely. Many annual award nights, destination weddings, and international expos opt for a
+                    co-hosting duo for dynamic stage chemistry and seamless dual-language presentation.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 12. BOOKING CTA ==================== -->
+    <section class="section-padding section-white">
+      <div class="container">
+        <div class="cta-banner-box" data-reveal>
+          <div class="cta-banner-bg">
+            <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1600&q=80"
+              alt="Stage lights and live audience" loading="lazy">
+          </div>
+          <div class="row align-items-center justify-content-between g-4">
+            <div class="col-lg-7">
+              <span class="eyebrow"><i class="bi bi-calendar2-heart-fill"></i> Lock In Your Stage Talent</span>
+              <h2 class="section-title text-white mb-3">
+                Ready to Customize Your <span class="text-gold">Event Hosting Package?</span>
+              </h2>
+              <p class="mb-0" style="color: rgba(250, 248, 243, 0.85);">
+                Submit your event details now and receive a tailored host proposal with video reels within 2 hours.
+              </p>
+            </div>
+            <div class="col-lg-auto d-flex flex-wrap gap-3">
+              <a href="contact.html" class="btn-brand-gold">
+                <i class="bi bi-send-fill"></i> Start Booking Enquiry
+              </a>
+              <a href="hosts.html" class="btn-brand-outline-gold">
+                View Host Directory
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== PROFESSIONAL FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4 justify-content-between">
+        <div class="col-lg-4">
+          <a href="index.html" class="brand-logo mb-3">
+            <img src="assets/images/logo.svg" alt="Anchor &amp; Emcee Booking Service" width="240" height="48">
+          </a>
+          <p class="mt-2 mb-3" style="color: rgba(250, 248, 243, 0.75); font-size: 0.93rem;">
+            The premier talent booking agency for corporate event anchors, luxury wedding emcees, award ceremony
+            presenters, bilingual moderators, and live concert hosts.
+          </p>
+          <div class="social-links" aria-label="Social Media Links">
+            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i
+                class="bi bi-instagram"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i
+                class="bi bi-youtube"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i
+                class="bi bi-linkedin"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="X Twitter"><i
+                class="bi bi-twitter-x"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="bi bi-chevron-right"></i> Home</a></li>
+            <li><a href="hosts.html"><i class="bi bi-chevron-right"></i> Our Hosts</a></li>
+            <li><a href="gallery.html"><i class="bi bi-chevron-right"></i> Event Gallery</a></li>
+            <li><a href="about.html"><i class="bi bi-chevron-right"></i> About Agency</a></li>
+            <li><a href="services.html"><i class="bi bi-chevron-right"></i> Services</a></li>
+            <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Book an Emcee</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <h3 class="footer-heading">Hosting Services</h3>
+          <ul class="footer-links">
+            <li><a href="services.html#corporate"><i class="bi bi-chevron-right"></i> Corporate Event Hosting</a></li>
+            <li><a href="services.html#weddings"><i class="bi bi-chevron-right"></i> Wedding Emcee Services</a></li>
+            <li><a href="services.html#awards"><i class="bi bi-chevron-right"></i> Award Ceremony Hosting</a></li>
+            <li><a href="services.html#concerts"><i class="bi bi-chevron-right"></i> Concert &amp; Live Show Anchoring</a></li>
+            <li><a href="services.html#college"><i class="bi bi-chevron-right"></i> College Festival Hosting</a></li>
+            <li><a href="services.html#bilingual"><i class="bi bi-chevron-right"></i> Bilingual &amp; Global Anchors</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 col-lg-3">
+          <h3 class="footer-heading">Booking Desk</h3>
+          <ul class="footer-links">
+            <li>
+              <a href="tel:+18009457824">
+                <i class="bi bi-telephone-fill" style="color: var(--color-accent);"></i> +1 (800) 945-STAGE
+              </a>
+            </li>
+            <li>
+              <a href="mailto:bookings@anchoremcee.com">
+                <i class="bi bi-envelope-fill" style="color: var(--color-accent);"></i> bookings@anchoremcee.com
+              </a>
+            </li>
+            <li class="d-flex align-items-start gap-2" style="color: rgba(250, 248, 243, 0.75); font-size: 0.9rem;">
+              <i class="bi bi-geo-alt-fill mt-1" style="color: var(--color-accent);"></i>
+              <span>Suite 1400, Starlight Media Tower, 580 Madison Ave, New York, NY</span>
+            </li>
+            <li class="d-flex align-items-center gap-2" style="color: var(--color-accent); font-size: 0.86rem;">
+              <i class="bi bi-clock-fill"></i>
+              <span>24/7 Live Event Support Desk</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Anchor &amp; Emcee Booking Service. All rights reserved.</span>
+        <div class="d-flex gap-3">
+          <a href="about.html">Editorial Standards</a>
+          <a href="services.html">Booking Terms</a>
+          <a href="contact.html">Support</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top-btn" type="button" aria-label="Scroll back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Bootstrap JS & Custom Script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

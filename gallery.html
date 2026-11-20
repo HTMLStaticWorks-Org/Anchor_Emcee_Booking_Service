@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Stage Gallery &amp; Event Moments | Anchor &amp; Emcee Booking Service</title>
+  <meta name="description"
+    content="Browse our live event photography gallery featuring corporate summits, luxury wedding receptions, black-tie award ceremonies, arena concerts, college festivals, and private galas.">
+  <meta name="theme-color" content="#101827">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+
+  <!-- Bootstrap 5.3 CSS & Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- ==================== STICKY HEADER ==================== -->
+  <header class="site-header" id="topHeader">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand-logo" aria-label="Anchor &amp; Emcee Booking Service Home">
+          <img src="assets/images/logo.svg" alt="Anchor &amp; Emcee Booking Service Logo" width="250" height="50">
+        </a>
+
+        <nav aria-label="Primary Navigation">
+          <ul class="desktop-nav">
+            <li><a href="index.html" class="nav-link-item">Home</a></li>
+            <li><a href="home2.html" class="nav-link-item">Home 2</a></li>
+            <li><a href="hosts.html" class="nav-link-item">Hosts</a></li>
+            <li><a href="gallery.html" class="nav-link-item active" aria-current="page">Gallery</a></li>
+            <li><a href="about.html" class="nav-link-item">About</a></li>
+            <li><a href="services.html" class="nav-link-item">Services</a></li>
+            <li><a href="contact.html" class="nav-link-item">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <button type="button" class="header-util-btn rtl-toggle-btn" aria-label="Switch to Right-to-Left (RTL)" aria-pressed="false" title="Toggle RTL/LTR">
+            <i class="bi bi-arrow-left-right"></i> <span class="rtl-btn-text">RTL</span>
+          </button>
+          <button type="button" class="header-util-btn theme-toggle-btn" aria-label="Switch to dark theme" aria-pressed="false" title="Toggle Dark/Light Theme">
+            <i class="bi bi-moon-stars-fill"></i>
+          </button>
+          <a href="contact.html" class="btn-brand-gold btn-sm-custom header-cta-desktop">
+            <i class="bi bi-mic-fill"></i> Book an Emcee
+          </a>
+          <button class="mobile-menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false"
+            aria-controls="mobileNavDrawer">
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== MOBILE NAVIGATION DRAWER ==================== -->
+  <div class="mobile-nav-overlay" aria-hidden="true"></div>
+  <aside class="mobile-nav-drawer" id="mobileNavDrawer" aria-label="Mobile Navigation" aria-hidden="true">
+    <div>
+      <div class="mobile-drawer-header">
+        <a href="index.html" class="brand-logo">
+          <img src="assets/images/logo.svg" alt="Anchor &amp; Emcee Booking Service" width="210" height="42">
+        </a>
+        <button class="mobile-drawer-close" type="button" aria-label="Close navigation menu">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li><a href="index.html"><span>Home</span> <i class="bi bi-chevron-right"></i></a></li>
+        <li><a href="home2.html"><span>Home 2</span> <i class="bi bi-chevron-right"></i></a></li>
+        <li><a href="hosts.html"><span>Hosts</span> <i class="bi bi-chevron-right"></i></a></li>
+        <li><a href="gallery.html" class="active"><span>Gallery</span> <i class="bi bi-chevron-right"></i></a></li>
+        <li><a href="about.html"><span>About</span> <i class="bi bi-chevron-right"></i></a></li>
+        <li><a href="services.html"><span>Services</span> <i class="bi bi-chevron-right"></i></a></li>
+        <li><a href="contact.html"><span>Contact</span> <i class="bi bi-chevron-right"></i></a></li>
+      </ul>
+    </div>
+    <div class="mobile-drawer-footer">
+      <div class="mobile-drawer-utilities">
+        <button type="button" class="header-util-btn rtl-toggle-btn" aria-label="Switch to Right-to-Left (RTL)" aria-pressed="false">
+          <i class="bi bi-arrow-left-right"></i> <span class="rtl-btn-text">RTL</span>
+        </button>
+        <button type="button" class="header-util-btn theme-toggle-btn" aria-label="Switch to dark theme" aria-pressed="false">
+          <i class="bi bi-moon-stars-fill"></i> <span class="theme-btn-text">Dark</span>
+        </button>
+      </div>
+      <a href="contact.html" class="btn-brand-gold w-100">
+        <i class="bi bi-mic-fill"></i> Book an Emcee
+      </a>
+      <div class="mobile-contact-quick">
+        <span><i class="bi bi-telephone-fill"></i> +1 (800) 945-STAGE</span>
+        <span><i class="bi bi-envelope-fill"></i> bookings@anchoremcee.com</span>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+
+    <!-- ==================== 1. FULL-WIDTH GALLERY INTRODUCTION BANNER ==================== -->
+    <section class="page-hero text-center">
+      <div class="page-hero-bg">
+        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1920&q=85"
+          alt="Stage spotlight illuminating a grand live event arena">
+      </div>
+      <div class="page-hero-overlay"></div>
+
+      <div class="container" data-reveal>
+        <ul class="breadcrumb-custom">
+          <li><a href="index.html">Home</a></li>
+          <li><i class="bi bi-chevron-right small text-white-50"></i></li>
+          <li class="active">Event Gallery</li>
+        </ul>
+        <div>
+          <span class="eyebrow"><i class="bi bi-camera-reels-fill"></i> Visual Stage Chronicle</span>
+        </div>
+        <h1>Unforgettable <span style="color: var(--color-accent); font-style: italic;">Stage &amp; Event Moments</span></h1>
+        <p class="section-subtitle mx-auto">
+          Step inside the spotlight. Explore real moments of electric crowd synergy, black-tie award presentations,
+          royal wedding celebrations, and stadium-scale live hosting.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== 2 & 3. FILTERABLE MASONRY GALLERY ==================== -->
+    <section class="section-padding section-ivory" id="gallery-showcase">
+      <div class="container">
+        <div class="text-center mb-4" data-reveal>
+          <span class="eyebrow"><i class="bi bi-images"></i> Curated Portfolio</span>
+          <h2 class="section-title">Live Hosting Across <span class="text-purple">Six Event Worlds</span></h2>
+          <p class="section-subtitle mb-4">
+            Click any category below to filter our stage portfolio, or select any photograph to launch the full-screen
+            stage lightbox.
+          </p>
+        </div>
+
+        <!-- Category Filter Buttons -->
+        <div class="filter-bar" data-filter-group data-filter-target=".gallery-item" role="toolbar"
+          aria-label="Gallery category filter" data-reveal>
+          <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">All Events</button>
+          <button type="button" class="filter-btn" data-filter="corporate" aria-pressed="false">Corporate Events</button>
+          <button type="button" class="filter-btn" data-filter="wedding" aria-pressed="false">Wedding Celebrations</button>
+          <button type="button" class="filter-btn" data-filter="awards" aria-pressed="false">Award Ceremonies</button>
+          <button type="button" class="filter-btn" data-filter="concerts" aria-pressed="false">Concerts &amp; Live Shows</button>
+          <button type="button" class="filter-btn" data-filter="college" aria-pressed="false">College Festivals</button>
+          <button type="button" class="filter-btn" data-filter="private" aria-pressed="false">Private Parties</button>
+        </div>
+
+        <!-- Responsive Masonry Grid (12 Unique Event Hosting Photos) -->
+        <div class="gallery-masonry" data-reveal>
+          <!-- Item 1: Corporate Events (Tall) -->
+          <article class="gallery-item tall" data-category="corporate" tabindex="0" role="button"
+            aria-label="View Global Tech Keynote Summit in Lightbox">
+            <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=900&q=85"
+              alt="Corporate anchor holding microphone on global keynote stage" loading="lazy">
+            <div class="gallery-item-overlay">
+              <span class="gallery-zoom-icon"><i class="bi bi-arrows-fullscreen"></i></span>
+              <span class="gallery-tag">Corporate Events</span>
+              <h3>Global Tech Keynote Summit</h3>
+              <p>Hosted by Julian Vance for 2,400 international delegates in New York.</p>
+            </div>
+          </article>
+
+          <!-- Item 2: Wedding Celebrations -->
+          <article class="gallery-item" data-category="wedding" tabindex="0" role="button"
+            aria-label="View Royal Palace Sangeet Night in Lightbox">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80"
+              alt="Luxury wedding emcee leading a celebratory toast with bride and groom" loading="lazy">
+            <div class="gallery-item-overlay">
+              <span class="gallery-zoom-icon"><i class="bi bi-arrows-fullscreen"></i></span>
+              <span class="gallery-tag">Wedding Celebrations</span>
+              <h3>Royal Palace Sangeet &amp; Reception</h3>
+              <p>Aria Mehra orchestrating the grand couple entry and familychoreography showdown.</p>
+            </div>
+          </article>
+
+          <!-- Item 3: Award Ceremonies -->
+          <article class="gallery-item" data-category="awards" tabindex="0" role="button"
+            aria-label="View Golden Globe Industry Gala in Lightbox">
+            <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=900&q=80"
+              alt="Black tie award ceremony stage illuminated with golden chandeliers" loading="lazy">
+            <div class="gallery-item-overlay">
+              <span class="gallery-zoom-icon"><i class="bi bi-arrows-fullscreen"></i></span>
+              <span class="gallery-tag">Award Ceremonies</span>
+              <h3>Annual Excellence Trophy Gala</h3>
+              <p>Black-tie red carpet and live trophy presentation hosted by Devon Brooks.</p>
+            </div>
+          </article>
+
+          <!-- Item 4: Concerts & Live Shows (Tall) -->
+          <article class="gallery-item tall" data-category="concerts" tabindex="0" role="button"
+            aria-label="View Starlight Arena Music Festival in Lightbox">
+            <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=900&q=85"
+              alt="Stage host hyping up a massive live concert arena with spotlights" loading="lazy">
+            <div class="gallery-item-overlay">
+              <span class="gallery-zoom-icon"><i class="bi bi-arrows-fullscreen"></i></span>
+              <span class="gallery-tag">Concerts &amp; Live Shows</span>
+              <h3>Starlight Arena Music Tour</h3>
+              <p>Marcus Sterling energizing 22,000 fans before the headline stadium act.</p>
+            </div>
+          </article>
+
+          <!-- Item 5: College Festivals -->
+          <article class="gallery-item" data-category="college" tabindex="0" role="button"
+            aria-label="View National University Cultural Fest in Lightbox">
+            <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=900&q=80"
+              alt="College festival crowd cheering with hands raised under purple lasers" loading="lazy">
+            <div class="gallery-item-overlay">
+              <span class="gallery-zoom-icon"><i class="bi bi-arrows-fullscreen"></i></span>
+              <span class="gallery-tag">College Festivals</span>
+              <h3>Crescendo Campus Youth Fest</h3>
+              <p>Kabir Malhotra leading the Battle of the Bands finale for 8,000 students.</p>
+            </div>
+          </article>
+
+          <!-- Item 6: Private Parties -->
+          <article class="gallery-item" data-category="private" tabindex="0" role="button"
+            aria-label="View Mediterranean Yacht Milestone Soirée in Lightbox">
+            <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=900&q=80"
+              alt="Luxury private milestone celebration dinner with sparkling lights" loading="lazy">
+            <div class="gallery-item-overlay">
+              <span class="gallery-zoom-icon"><i class="bi bi-arrows-fullscreen"></i></span>
+              <span class="gallery-tag">Private Parties</span>
+              <h3>Golden Jubilee Private Soirée</h3>
+              <p>Camila Vasquez hosting an intimate 200-guest luxury anniversary banquet.</p>
+            </div>
+          </article>
+
+          <!-- Item 7: Corporate Events -->
+          <article class="gallery-item" data-category="corporate" tabindex="0" role="button"
+            aria-label="View Executive Fireside Moderation in Lightbox">
+            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=900&q=80"
+              alt="Corporate leadership forum auditorium and stage" loading="lazy">
+            <div class="gallery-item-overlay">
+              <span class="gallery-zoom-icon"><i class="bi bi-arrows-fullscreen"></i></span>
+              <span class="gallery-tag">Corporate Events</span>
+              <h3>World FinTech Leadership Forum</h3>
+              <p>Trilingual fireside chat moderated by Nadia Al-Mansoor in Dubai.</p>
+            </div>
+          </article>
+
+          <!-- Item 8: Award Ceremonies (Tall) -->
+          <article class="gallery-item tall" data-category="awards" tabindex="0" role="button"
+            aria-label="View International Film &amp; Media Awards in Lightbox">
+            <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=900&q=85"
+              alt="Presenter on a dramatically lit award ceremony podium" loading="lazy">
+            <div class="gallery-item-overlay">
+              <span class="gallery-zoom-icon"><i class="bi bi-arrows-fullscreen"></i></span>
+              <span class="gallery-tag">Award Ceremonies</span>
+              <h3>International Media &amp; Film Honours</h3>
+              <p>Elena Rostova hosting the red carpet premiere and televised trophy presentation.</p>
+            </div>
+          </article>
+
+          <!-- Item 9: Concerts & Live Shows -->
+          <article class="gallery-item" data-category="concerts" tabindex="0" role="button"
+            aria-label="View Electric Symphony Live Broadcast in Lightbox">
+            <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=900&q=80"
+              alt="Live concert stage beams and cheering stadium audience" loading="lazy">
+            <div class="gallery-item-overlay">
+              <span class="gallery-zoom-icon"><i class="bi bi-arrows-fullscreen"></i></span>
+              <span class="gallery-tag">Concerts &amp; Live Shows</span>
+              <h3>Symphony Under the Stars Live</h3>
+              <p>Live broadcast anchoring and artist introductions in London.</p>
+            </div>
+          </article>
+
+          <!-- Item 10: Wedding Celebrations -->
+          <article class="gallery-item" data-category="wedding" tabindex="0" role="button"
+            aria-label="View Lake Como Destination Reception in Lightbox">
+            <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=900&q=80"
+              alt="Elegant wedding banquet hall table setting and stage backdrop" loading="lazy">
+            <div class="gallery-item-overlay">
+              <span class="gallery-zoom-icon"><i class="bi bi-arrows-fullscreen"></i></span>
+              <span class="gallery-tag">Wedding Celebrations</span>
+              <h3>Lake Como Villa Wedding Gala</h3>
+              <p>Bilingual English &amp; Italian reception toast and couple trivia games.</p>
+            </div>
+          </article>
+
+          <!-- Item 11: College Festivals -->
+          <article class="gallery-item" data-category="college" tabindex="0" role="button"
+            aria-label="View Inter-Varsity E-Sports &amp; Music Arena in Lightbox">
+            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=900&q=80"
+              alt="Youth music festival confetti and dramatic purple stage lighting" loading="lazy">
+            <div class="gallery-item-overlay">
+              <span class="gallery-zoom-icon"><i class="bi bi-arrows-fullscreen"></i></span>
+              <span class="gallery-tag">College Festivals</span>
+              <h3>National Youth E-Sports &amp; DJ Night</h3>
+              <p>High-octane countdowns and live crowd giveaway segments.</p>
+            </div>
+          </article>
+
+          <!-- Item 12: Private Parties -->
+          <article class="gallery-item" data-category="private" tabindex="0" role="button"
+            aria-label="View Couture Brand VIP Afterparty in Lightbox">
+            <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=900&q=80"
+              alt="VIP guests toasting champagne at an exclusive private gala" loading="lazy">
+            <div class="gallery-item-overlay">
+              <span class="gallery-zoom-icon"><i class="bi bi-arrows-fullscreen"></i></span>
+              <span class="gallery-tag">Private Parties</span>
+              <h3>VIP Penthouse Launch &amp; Soirée</h3>
+              <p>Bespoke cocktail hour hosting and celebrity guest introductions.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 7. EVENT MOMENTS HIGHLIGHT SECTION ==================== -->
+    <section class="section-padding section-dark" id="event-moments-highlight">
+      <div class="container">
+        <div class="text-center mb-5" data-reveal>
+          <span class="eyebrow"><i class="bi bi-film"></i> Signature Production Highlights</span>
+          <h2 class="section-title text-white">Behind the <span class="text-gold">Microphone &amp; Cue Lights</span></h2>
+          <p class="section-subtitle">
+            See how our anchors partner with production directors from backstage soundcheck to the final standing
+            ovation.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-4" data-reveal>
+            <div class="feature-card-luxury">
+              <div class="rounded-3 overflow-hidden mb-3" style="height: 210px;">
+                <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=800&q=80"
+                  alt="Professional studio and stage microphone setup during soundcheck" loading="lazy"
+                  style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+              <span class="eyebrow mb-2">01 &middot; Technical Rehearsal</span>
+              <h3 class="text-white">Precision Soundcheck &amp; Cue Walkthrough</h3>
+              <p>
+                Every host arrives 3 hours prior to doors opening to test wireless RF microphones, teleprompter scroll
+                speeds, and stage blocking with your AV crew.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4" data-reveal data-reveal-delay="120">
+            <div class="feature-card-luxury">
+              <div class="rounded-3 overflow-hidden mb-3" style="height: 210px;">
+                <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=800&q=80"
+                  alt="Interactive corporate panel session and audience Q and A" loading="lazy"
+                  style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+              <span class="eyebrow mb-2">02 &middot; Live Crowd Synergy</span>
+              <h3 class="text-white">Spontaneous Audience Interaction</h3>
+              <p>
+                From live executive Q&amp;A moderation to unscripted wedding family banter, our anchors keep energy
+                soaring without ever feeling rehearsed or stiff.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4" data-reveal data-reveal-delay="240">
+            <div class="feature-card-luxury">
+              <div class="rounded-3 overflow-hidden mb-3" style="height: 210px;">
+                <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80"
+                  alt="Grand finale confetti cannon blast over celebratory stage" loading="lazy"
+                  style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+              <span class="eyebrow mb-2">03 &middot; Grand Finale</span>
+              <h3 class="text-white">Show-Stopping Closing Moments</h3>
+              <p>
+                We orchestrate unforgettable closing crescendos—whether it's the Championship Trophy lift, a keynote
+                standing ovation, or the newlyweds' sparkler exit.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 8. BOOKING CTA ==================== -->
+    <section class="section-padding section-white">
+      <div class="container">
+        <div class="cta-banner-box" data-reveal>
+          <div class="cta-banner-bg">
+            <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&w=1600&q=80"
+              alt="Live stage event lighting" loading="lazy">
+          </div>
+          <div class="row align-items-center justify-content-between g-4">
+            <div class="col-lg-7">
+              <span class="eyebrow"><i class="bi bi-sparkles"></i> Create Your Own Iconic Stage Moment</span>
+              <h2 class="section-title text-white mb-3">
+                Let’s Put the <span class="text-gold">Right Voice</span> on Your Stage
+              </h2>
+              <p class="mb-0" style="color: rgba(250, 248, 243, 0.85);">
+                Book a professional anchor or bilingual emcee who brings visual polish, vocal authority, and seamless
+                energy to your next event.
+              </p>
+            </div>
+            <div class="col-lg-auto d-flex flex-wrap gap-3">
+              <a href="contact.html" class="btn-brand-gold">
+                <i class="bi bi-calendar2-check-fill"></i> Book an Emcee Today
+              </a>
+              <a href="hosts.html" class="btn-brand-outline-gold">
+                Explore Our Hosts
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== 6. INTERACTIVE LIGHTBOX MODAL ==================== -->
+  <div class="lightbox-modal" id="galleryLightbox" role="dialog" aria-modal="true" aria-hidden="true"
+    aria-labelledby="lightboxTitle">
+    <div class="lightbox-content">
+      <button type="button" class="lightbox-close" aria-label="Close lightbox">
+        <i class="bi bi-x-lg"></i>
+      </button>
+      <button type="button" class="lightbox-nav prev" aria-label="Previous image">
+        <i class="bi bi-chevron-left"></i>
+      </button>
+      <button type="button" class="lightbox-nav next" aria-label="Next image">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+
+      <div class="lightbox-media-wrap">
+        <img id="lightboxImage" src="assets/images/logo.svg" alt="Expanded Event Stage Photograph">
+      </div>
+      <div class="lightbox-caption-bar">
+        <div>
+          <span id="lightboxCategory" class="gallery-tag mb-1">Event Category</span>
+          <h3 id="lightboxTitle">Stage Moment Title</h3>
+          <p id="lightboxDesc">Event hosting performance description.</p>
+        </div>
+        <a href="contact.html" class="btn-brand-gold btn-sm-custom">
+          <i class="bi bi-mic-fill"></i> Book Similar Host
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== PROFESSIONAL FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4 justify-content-between">
+        <div class="col-lg-4">
+          <a href="index.html" class="brand-logo mb-3">
+            <img src="assets/images/logo.svg" alt="Anchor &amp; Emcee Booking Service" width="240" height="48">
+          </a>
+          <p class="mt-2 mb-3" style="color: rgba(250, 248, 243, 0.75); font-size: 0.93rem;">
+            The premier talent booking agency for corporate event anchors, luxury wedding emcees, award ceremony
+            presenters, bilingual moderators, and live concert hosts.
+          </p>
+          <div class="social-links" aria-label="Social Media Links">
+            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i
+                class="bi bi-instagram"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i
+                class="bi bi-youtube"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i
+                class="bi bi-linkedin"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="X Twitter"><i
+                class="bi bi-twitter-x"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="bi bi-chevron-right"></i> Home</a></li>
+            <li><a href="hosts.html"><i class="bi bi-chevron-right"></i> Our Hosts</a></li>
+            <li><a href="gallery.html"><i class="bi bi-chevron-right"></i> Event Gallery</a></li>
+            <li><a href="about.html"><i class="bi bi-chevron-right"></i> About Agency</a></li>
+            <li><a href="services.html"><i class="bi bi-chevron-right"></i> Services</a></li>
+            <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Book an Emcee</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <h3 class="footer-heading">Hosting Services</h3>
+          <ul class="footer-links">
+            <li><a href="services.html#corporate"><i class="bi bi-chevron-right"></i> Corporate Event Hosting</a></li>
+            <li><a href="services.html#weddings"><i class="bi bi-chevron-right"></i> Wedding Emcee Services</a></li>
+            <li><a href="services.html#awards"><i class="bi bi-chevron-right"></i> Award Ceremony Hosting</a></li>
+            <li><a href="services.html#concerts"><i class="bi bi-chevron-right"></i> Concert &amp; Live Show Anchoring</a></li>
+            <li><a href="services.html#college"><i class="bi bi-chevron-right"></i> College Festival Hosting</a></li>
+            <li><a href="services.html#bilingual"><i class="bi bi-chevron-right"></i> Bilingual &amp; Global Anchors</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 col-lg-3">
+          <h3 class="footer-heading">Booking Desk</h3>
+          <ul class="footer-links">
+            <li>
+              <a href="tel:+18009457824">
+                <i class="bi bi-telephone-fill" style="color: var(--color-accent);"></i> +1 (800) 945-STAGE
+              </a>
+            </li>
+            <li>
+              <a href="mailto:bookings@anchoremcee.com">
+                <i class="bi bi-envelope-fill" style="color: var(--color-accent);"></i> bookings@anchoremcee.com
+              </a>
+            </li>
+            <li class="d-flex align-items-start gap-2" style="color: rgba(250, 248, 243, 0.75); font-size: 0.9rem;">
+              <i class="bi bi-geo-alt-fill mt-1" style="color: var(--color-accent);"></i>
+              <span>Suite 1400, Starlight Media Tower, 580 Madison Ave, New York, NY</span>
+            </li>
+            <li class="d-flex align-items-center gap-2" style="color: var(--color-accent); font-size: 0.86rem;">
+              <i class="bi bi-clock-fill"></i>
+              <span>24/7 Live Event Support Desk</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Anchor &amp; Emcee Booking Service. All rights reserved.</span>
+        <div class="d-flex gap-3">
+          <a href="about.html">Editorial Standards</a>
+          <a href="services.html">Booking Terms</a>
+          <a href="contact.html">Support</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top-btn" type="button" aria-label="Scroll back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Bootstrap JS & Custom Script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

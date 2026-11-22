@@ -32,9 +32,9 @@
           <ul class="desktop-nav">
             <li><a href="index.html" class="nav-link-item">Home</a></li>
             <li><a href="home2.html" class="nav-link-item">Home 2</a></li>
+            <li><a href="about.html" class="nav-link-item active" aria-current="page">About</a></li>
             <li><a href="hosts.html" class="nav-link-item">Hosts</a></li>
             <li><a href="gallery.html" class="nav-link-item">Gallery</a></li>
-            <li><a href="about.html" class="nav-link-item active" aria-current="page">About</a></li>
             <li><a href="services.html" class="nav-link-item">Services</a></li>
             <li><a href="contact.html" class="nav-link-item">Contact</a></li>
           </ul>
@@ -74,9 +74,9 @@
       <ul class="mobile-nav-list">
         <li><a href="index.html"><span>Home</span> <i class="bi bi-chevron-right"></i></a></li>
         <li><a href="home2.html"><span>Home 2</span> <i class="bi bi-chevron-right"></i></a></li>
+        <li><a href="about.html" class="active"><span>About</span> <i class="bi bi-chevron-right"></i></a></li>
         <li><a href="hosts.html"><span>Hosts</span> <i class="bi bi-chevron-right"></i></a></li>
         <li><a href="gallery.html"><span>Gallery</span> <i class="bi bi-chevron-right"></i></a></li>
-        <li><a href="about.html" class="active"><span>About</span> <i class="bi bi-chevron-right"></i></a></li>
         <li><a href="services.html"><span>Services</span> <i class="bi bi-chevron-right"></i></a></li>
         <li><a href="contact.html"><span>Contact</span> <i class="bi bi-chevron-right"></i></a></li>
       </ul>
@@ -172,12 +172,12 @@
               palace weddings, televised award shows, and 25,000-seat music festivals across the globe.
             </p>
 
-            <div class="d-flex flex-wrap gap-3">
+            <div class="btn-group-equal">
               <a href="hosts.html" class="btn-brand-purple">
                 <i class="bi bi-people-fill"></i> Meet Our Talent Roster
               </a>
               <a href="contact.html" class="btn-brand-outline-dark">
-                Schedule a Consultation
+                <i class="bi bi-calendar2-check-fill"></i> Schedule a Consultation
               </a>
             </div>
           </div>
@@ -196,21 +196,23 @@
           </p>
         </div>
 
-        <div class="row g-4">
+        <div class="row g-4 align-items-stretch">
           <div class="col-lg-6" data-reveal>
-            <div class="p-4 p-md-5 rounded-4 h-100"
-              style="background: var(--color-primary); color: var(--color-surface); border: 1.5px solid var(--color-accent);">
-              <div class="feature-icon-box mb-4" style="background: rgba(216,180,106,0.16); color: var(--color-accent);">
-                <i class="bi bi-bullseye"></i>
+            <div class="p-4 p-md-5 rounded-4 h-100 d-flex flex-column mission-dark-card"
+              style="background: #101827; color: #FFFFFF; border: 1.5px solid var(--color-accent);">
+              <div class="d-flex align-items-center gap-3 mb-4">
+                <div class="feature-icon-box mb-0" style="background: rgba(216,180,106,0.18); color: #F3D99B; border-color: rgba(216,180,106,0.5);">
+                  <i class="bi bi-bullseye"></i>
+                </div>
+                <span class="eyebrow mb-0">Our Mission</span>
               </div>
-              <span class="eyebrow mb-2">Our Mission</span>
               <h3 class="text-white mb-3">To Empower Every Stage with Authority, Warmth &amp; Precision</h3>
-              <p class="mb-3" style="color: rgba(250, 248, 243, 0.84);">
+              <p class="mb-4 flex-grow-1" style="color: rgba(255, 255, 255, 0.88);">
                 Our mission is to eliminate the stress of live stage management for event organizers by pairing every
                 production with an articulate, thoroughly briefed, and charismatic host who elevates audience
                 engagement from the opening cue to the final applause.
               </p>
-              <ul class="list-unstyled d-flex flex-column gap-2 mb-0 small" style="color: var(--color-accent);">
+              <ul class="list-unstyled d-flex flex-column gap-2 mb-0 small fw-semibold mt-auto" style="color: #F3D99B;">
                 <li><i class="bi bi-check-circle-fill me-2"></i> Zero generic scripts—100% tailored event narratives</li>
                 <li><i class="bi bi-check-circle-fill me-2"></i> Seamless collaboration with AV and show-calling crews</li>
                 <li><i class="bi bi-check-circle-fill me-2"></i> Transparent booking contracts and backup guarantees</li>
@@ -219,20 +221,22 @@
           </div>
 
           <div class="col-lg-6" data-reveal data-reveal-delay="150">
-            <div class="p-4 p-md-5 rounded-4 h-100 bg-white"
+            <div class="p-4 p-md-5 rounded-4 h-100 d-flex flex-column bg-white vision-light-card"
               style="border: 1.5px solid var(--border-purple); box-shadow: var(--shadow-md);">
-              <div class="feature-icon-box mb-4"
-                style="background: var(--purple-soft); color: var(--color-secondary); border-color: var(--border-purple);">
-                <i class="bi bi-eye-fill"></i>
+              <div class="d-flex align-items-center gap-3 mb-4">
+                <div class="feature-icon-box mb-0"
+                  style="background: var(--purple-soft); color: var(--color-secondary); border-color: var(--border-purple);">
+                  <i class="bi bi-eye-fill"></i>
+                </div>
+                <span class="eyebrow mb-0">Our Vision</span>
               </div>
-              <span class="eyebrow mb-2">Our Vision</span>
               <h3 class="mb-3">Setting the Global Benchmark for Live Event Anchoring</h3>
-              <p class="text-muted-custom mb-3">
+              <p class="text-muted-custom mb-4 flex-grow-1">
                 We envision a global events landscape where every conference, wedding celebration, cultural festival,
                 and gala ceremony commands broadcast-level stagecraft—bridging languages, cultures, and generations
                 through the power of the spoken word.
               </p>
-              <ul class="list-unstyled d-flex flex-column gap-2 mb-0 small fw-semibold"
+              <ul class="list-unstyled d-flex flex-column gap-2 mb-0 small fw-semibold mt-auto"
                 style="color: var(--color-secondary);">
                 <li><i class="bi bi-check-circle-fill me-2"></i> Continuous vocal &amp; stage coaching for our roster</li>
                 <li><i class="bi bi-check-circle-fill me-2"></i> Expanding multilingual talent across 15+ global languages</li>
@@ -359,14 +363,14 @@
             <div class="row g-3">
               <div class="col-6">
                 <div class="rounded-4 overflow-hidden shadow-md">
-                  <img src="https://images.unsplash.com/photo-1560439514-4e9645039924?auto=format&fit=crop&w=700&q=80"
+                  <img src="assets/images/image.png"
                     alt="Corporate conference moderator on stage" loading="lazy"
                     style="height: 260px; width: 100%; object-fit: cover;">
                 </div>
               </div>
               <div class="col-6">
                 <div class="rounded-4 overflow-hidden shadow-md mt-4">
-                  <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=700&q=80"
+                  <img src="assets/images/image copy.png"
                     alt="Live concert host under spotlights" loading="lazy"
                     style="height: 260px; width: 100%; object-fit: cover;">
                 </div>
@@ -457,12 +461,12 @@
                 ceremony, our team is ready to match you with the ideal voice.
               </p>
             </div>
-            <div class="col-lg-auto d-flex flex-wrap gap-3">
+            <div class="col-lg-auto btn-group-equal">
               <a href="contact.html" class="btn-brand-gold">
                 <i class="bi bi-calendar2-check-fill"></i> Book Your Emcee
               </a>
               <a href="hosts.html" class="btn-brand-outline-gold">
-                Meet Our Hosts
+                <i class="bi bi-people-fill"></i> Meet Our Hosts
               </a>
             </div>
           </div>
@@ -500,9 +504,10 @@
           <h3 class="footer-heading">Quick Links</h3>
           <ul class="footer-links">
             <li><a href="index.html"><i class="bi bi-chevron-right"></i> Home</a></li>
+            <li><a href="home2.html"><i class="bi bi-chevron-right"></i> Home 2</a></li>
+            <li><a href="about.html"><i class="bi bi-chevron-right"></i> About Agency</a></li>
             <li><a href="hosts.html"><i class="bi bi-chevron-right"></i> Our Hosts</a></li>
             <li><a href="gallery.html"><i class="bi bi-chevron-right"></i> Event Gallery</a></li>
-            <li><a href="about.html"><i class="bi bi-chevron-right"></i> About Agency</a></li>
             <li><a href="services.html"><i class="bi bi-chevron-right"></i> Services</a></li>
             <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Book an Emcee</a></li>
           </ul>
